@@ -1,5 +1,5 @@
 const Header = () => (
-    <header>
+    <section>
         <nav className="navbar navbar-expand-lg">
             <div className="logo-wrapper valign">
                 <div className="logo">
@@ -20,10 +20,9 @@ const Header = () => (
                 aria-expanded="false"
                 aria-label="Toggle navigation"
             >
-                {" "}
                 <span className="icon-bar">
                     <i className="ti-line-double" />
-                </span>{" "}
+                </span>
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto">
@@ -38,9 +37,7 @@ const Header = () => (
                         </a>
                     </li>
                     <li className="nav-item dropdown">
-                        {" "}
                         <span className="nav-link">
-                            {" "}
                             Services <i className="ti-angle-down" />
                         </span>
                         <ul className="dropdown-menu last">
@@ -59,9 +56,7 @@ const Header = () => (
                         </ul>
                     </li>
                     <li className="nav-item dropdown">
-                        {" "}
                         <span className="nav-link">
-                            {" "}
                             Projects <i className="ti-angle-down" />
                         </span>
                         <ul className="dropdown-menu last">
@@ -86,9 +81,7 @@ const Header = () => (
                         </ul>
                     </li>
                     <li className="nav-item dropdown">
-                        {" "}
                         <span className="nav-link">
-                            {" "}
                             Pages <i className="ti-angle-down" />
                         </span>
                         <ul className="dropdown-menu last">
@@ -135,19 +128,17 @@ const Header = () => (
                                 </span>
                                 <ul className="sub-menu">
                                     <li className="dropdown-item">
-                                        <a href="#">Dropdown 3</a>
+                                        <a href="/">Dropdown 3</a>
                                     </li>
                                     <li className="dropdown-item">
-                                        <a href="#">Dropdown 3</a>
+                                        <a href="/">Dropdown 3</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li className="nav-item dropdown">
-                        {" "}
                         <span className="nav-link">
-                            {" "}
                             Blog <i className="ti-angle-down" />
                         </span>
                         <ul className="dropdown-menu last">
@@ -173,7 +164,7 @@ const Header = () => (
                 </ul>
             </div>
         </nav>
-    </header>
+    </section>
 );
 
 export default Header;
