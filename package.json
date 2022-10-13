@@ -16,6 +16,7 @@
         "@typescript-eslint/eslint-plugin": "^5.40.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-responsive-carousel": "^3.2.23",
         "react-router-dom": "6",
         "styled-components": "^5.3.6"
     },
