@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Slider1 from "../../assets/img/slider/1.jpg";
 import Slider2 from "../../assets/img/slider/2.jpg";
 import CarouselSection from "../../components/blocks/CarouselSection";
+import AboutSection from "../../components/sections/AboutSection";
 
 const Wrapper = styled.div`
     height: 100vh;
@@ -81,21 +82,24 @@ const socialIcons = [
 ];
 
 const Homepage = () => (
-    <header className="header slider-fade">
-        <Wrapper className="">
-            <CarouselSection imageArr={carouselItems} />
-        </Wrapper>
+    <>
+        <header className="header slider-fade">
+            <Wrapper className="">
+                <CarouselSection imageArr={carouselItems} />
+            </Wrapper>
 
-        <div className="left-panel">
-            <ul className="social-left clearfix">
-                {socialIcons.map(item => (
-                    <li key={item.idx}>
-                        <span />
-                    </li>
-                ))}
-            </ul>
-        </div>
-    </header>
+            <div className="left-panel">
+                <ul className="social-left clearfix">
+                    {socialIcons.map(item => (
+                        <li key={item.idx}>
+                            <span />
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </header>
+        <AboutSection />
+    </>
 );
 
 export default Homepage;
