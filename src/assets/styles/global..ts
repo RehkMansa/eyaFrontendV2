@@ -900,7 +900,7 @@ blockquote cite:before {
     padding: 3px 0;
 }
 .social-left li:first-child {}
-.social-left li a {
+.social-left li span {
     display: inline-block;
     text-decoration: none;
     width: 40px;
@@ -915,7 +915,7 @@ blockquote cite:before {
     -o-transition: all .4s;
     transition: all .4s;
 }
-.social-left li a:hover {
+.social-left li span:hover {
     color: #b19777;
     border: 1px solid #b19777;
 }

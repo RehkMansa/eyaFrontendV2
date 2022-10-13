@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Facebook } from "../../assets/icons";
 import Slider1 from "../../assets/img/slider/1.jpg";
 import Slider2 from "../../assets/img/slider/2.jpg";
 import CarouselSection from "../../components/blocks/CarouselSection";
@@ -44,8 +45,8 @@ const CarouselItem = () => (
                             Curabitur viverra the posuere aukue velit.
                         </p>
                         <div className="butn-light mt-30 mb-30">
-                            <a href="/">
-                                <span>Buy Now</span>
+                            <a href="/properties">
+                                <span>Our Properties</span>
                             </a>
                         </div>
                     </div>
@@ -68,6 +69,24 @@ const carouselItems = [
     },
 ];
 
+const socialIcons = [
+    {
+        idx: 0,
+        name: "Facebook",
+        icon: <Facebook />,
+    },
+    {
+        idx: 1,
+        name: "Facebook",
+        icon: <Facebook />,
+    },
+    {
+        idx: 2,
+        name: "Facebook",
+        icon: <Facebook />,
+    },
+];
+
 const Homepage = () => (
     <header className="header slider-fade">
         <Wrapper className="">
@@ -76,11 +95,11 @@ const Homepage = () => (
 
         <div className="left-panel">
             <ul className="social-left clearfix">
-                <li>
-                    <a href="/">
-                        <i className="ti-pinterest" />
-                    </a>
-                </li>
+                {socialIcons.map(item => (
+                    <li key={item.idx}>
+                        <span />
+                    </li>
+                ))}
             </ul>
         </div>
     </header>
