@@ -1,9 +1,12 @@
-import PreLoader from "./components/elements/PreLoader";
+import { BrowserRouter } from "react-router-dom";
+import GlobalStyles from "./assets/styles/global.";
+import AllRoutes from "./routes/routes";
 
 const App = () => (
-    <div>
-        <PreLoader />
-    </div>
+    <BrowserRouter>
+        <GlobalStyles />
+        <AllRoutes />
+    </BrowserRouter>
 );
 
 export default App;
