@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Facebook } from "../../assets/icons";
 import Slider1 from "../../assets/img/slider/1.jpg";
 import Slider2 from "../../assets/img/slider/2.jpg";
 import CarouselSection from "../../components/blocks/CarouselSection";
@@ -72,18 +71,12 @@ const carouselItems = [
 const socialIcons = [
     {
         idx: 0,
-        name: "Facebook",
-        icon: <Facebook />,
     },
     {
         idx: 1,
-        name: "Facebook",
-        icon: <Facebook />,
     },
     {
         idx: 2,
-        name: "Facebook",
-        icon: <Facebook />,
     },
 ];
 
