@@ -1,6 +1,8 @@
+import PreLoader from "./components/elements/PreLoader";
+
 const App = () => (
-    <div className="App">
-        <h1>React TypeScript Template by rehkmansa</h1>
+    <div>
+        <PreLoader />
     </div>
 );
 

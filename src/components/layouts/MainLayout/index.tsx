@@ -1,8 +1,10 @@
+import { Outlet } from "react-router-dom";
+import Header from "../../blocks/Header";
+
 const MainLayout = () => (
     <main>
-        <section>
-            <h1>Main Layout</h1>
-        </section>
+        <Header />
+        <Outlet />
     </main>
 );
 export default MainLayout;
