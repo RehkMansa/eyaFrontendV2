@@ -18,10 +18,15 @@ const SwiperSection = ({ slidesPerView: slides, children }: Props) => (
         <Swiper
             modules={[Pagination, A11y]}
             spaceBetween={50}
-            slidesPerView={slides}
-            slidesPerGroup={slides}
+            slidesPerView={1}
+            slidesPerGroup={1}
             pagination={{ clickable: true }}
-            loop={true}
+            breakpoints={{
+                576: {
+                    slidesPerView: slides,
+                    slidesPerGroup: slides,
+                },
+            }}
         >
             {children}
         </Swiper>
