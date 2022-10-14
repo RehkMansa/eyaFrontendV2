@@ -3,6 +3,7 @@ import Slider1 from "../../assets/img/slider/1.jpg";
 import Slider2 from "../../assets/img/slider/2.jpg";
 import CarouselSection from "../../components/blocks/CarouselSection";
 import AboutSection from "../../components/sections/AboutSection";
+import OurServices from "../../components/sections/OurServices";
 import ProjectSection from "../../components/sections/Project";
 
 const Wrapper = styled.div`
@@ -100,6 +101,7 @@ const Homepage = () => (
         </header>
         <AboutSection />
         <ProjectSection />
+        <OurServices />
     </>
 );
 
