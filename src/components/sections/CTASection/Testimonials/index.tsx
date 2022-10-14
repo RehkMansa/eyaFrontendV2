@@ -5,13 +5,12 @@ import Quote from "../../../../assets/img/quot.png";
 type Props = { testimonial: string; name: string; desc: string };
 
 const Card = ({ testimonial, name, desc }: Props) => (
-    <div className="item">
+    <div className="item text-center">
         <span className="quote">
             <img src={Quote} alt="" />
         </span>
         <p>{testimonial}</p>
         <div className="info">
-            <div className="author-img">{/* <img src="img/team/1.jpg" alt="" /> */}</div>
             <div className="cont">
                 <h6>{name}</h6>
                 <span>{desc}</span>
@@ -56,10 +55,7 @@ const Testimonials = () => (
                     <div className="col-md-6">
                         <div className="vid-area">
                             <div className="vid-icon">
-                                <a
-                                    className="play-button vid"
-                                    href="https://youtu.be/RziCmLzpFNY"
-                                >
+                                <span className="play-button vid">
                                     <svg className="circle-fill">
                                         <circle
                                             cx="43"
@@ -82,7 +78,7 @@ const Testimonials = () => (
                                     <span className="polygon">
                                         <i className="ti-control-play" />
                                     </span>
-                                </a>
+                                </span>
                             </div>
                             <div className="cont mt-15 mb-30">
                                 <h5>View promo video</h5>
@@ -94,7 +90,7 @@ const Testimonials = () => (
                             className="testimonials-box animate-box"
                             data-animate-effect="fadeInUp"
                         >
-                            <div className="head-box">
+                            <div className="head-box text-center">
                                 <h4>What Client's Say?</h4>
                             </div>
                             <div className="owl-carousel owl-theme">

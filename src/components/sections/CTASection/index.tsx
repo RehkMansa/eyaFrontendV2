@@ -1,9 +1,10 @@
+import Clients from "./Clients";
 import Testimonials from "./Testimonials";
 
 const CTASection = () => (
     <>
         <Testimonials />
-        <CTASection />
+        <Clients />
     </>
 );
 export default CTASection;

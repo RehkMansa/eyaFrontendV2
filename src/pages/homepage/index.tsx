@@ -3,6 +3,7 @@ import Slider1 from "../../assets/img/slider/1.jpg";
 import Slider2 from "../../assets/img/slider/2.jpg";
 import CarouselSection from "../../components/blocks/CarouselSection";
 import AboutSection from "../../components/sections/AboutSection";
+import CTASection from "../../components/sections/CTASection";
 import OurServices from "../../components/sections/OurServices";
 import ProjectSection from "../../components/sections/Project";
 
@@ -102,6 +103,7 @@ const Homepage = () => (
         <AboutSection />
         <ProjectSection />
         <OurServices />
+        <CTASection />
     </>
 );
 

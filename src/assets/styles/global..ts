@@ -2976,8 +2976,8 @@ button.mfp-arrow {
     color: #999;
 }
 .testimonials .item .info {
-    text-align: left;
-    margin: 30px 0 15px 0;
+    text-align: center;
+    margin: 10px 0 15px 0;
 }
 .testimonials .item .info .author-img {
         width: 55px;
@@ -2986,9 +2986,7 @@ button.mfp-arrow {
     float: left;
     overflow: hidden;
 }
-.testimonials .item .info .cont {
-    margin-left: 70px;
-}
+
 .testimonials .item .info h6 {
     font-size: 16px;
     margin-bottom: 0px;
