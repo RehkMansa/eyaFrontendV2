@@ -1,21 +1,31 @@
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Pagination, A11y } from "swiper";
 import { Swiper } from "swiper/react";
-import "swiper/css/bundle";
 import { ReactNode } from "react";
+import "swiper/css";
+import "swiper/css/pagination";
+import styled from "styled-components";
+
+const Wrapper = styled.main`
+    & .swiper-pagination-bullet-active {
+        background-color: #b19777;
+    }
+`;
 
 type Props = { slidesPerView: number; children: ReactNode };
 
 const SwiperSection = ({ slidesPerView: slides, children }: Props) => (
-    <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        slidesPerView={slides}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-    >
-        {children}
-    </Swiper>
+    <Wrapper>
+        <Swiper
+            modules={[Pagination, A11y]}
+            spaceBetween={50}
+            slidesPerView={slides}
+            slidesPerGroup={slides}
+            pagination={{ clickable: true }}
+            loop={true}
+        >
+            {children}
+        </Swiper>
+    </Wrapper>
 );
 
 export default SwiperSection;

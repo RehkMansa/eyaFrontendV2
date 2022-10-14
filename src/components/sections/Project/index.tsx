@@ -30,25 +30,25 @@ const ProjectSlide = ({ title, desc, img }: Props) => (
 const options = [
     {
         idx: 0,
-        title: "Mansion",
+        title: "Mansion 1",
         desc: "Just a house",
         img: Property1,
     },
     {
         idx: 1,
-        title: "Mansion",
+        title: "Mansion 2",
         desc: "Just a house",
         img: Property2,
     },
     {
         idx: 2,
-        title: "Mansion",
+        title: "Mansion 3",
         desc: "Just a house",
         img: Property3,
     },
     {
         idx: 3,
-        title: "Mansion",
+        title: "Mansion 4",
         desc: "Just a house",
         img: Property4,
     },
