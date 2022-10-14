@@ -1,7 +1,9 @@
+import { SwiperSlide } from "swiper/react";
 import Property1 from "../../../assets/img/projects/1.jpg";
 import Property2 from "../../../assets/img/projects/2.jpg";
 import Property3 from "../../../assets/img/projects/3.jpg";
 import Property4 from "../../../assets/img/projects/4.jpg";
+import SwiperSection from "../../blocks/SwiperSection";
 
 type Props = { title: string; desc: string; img: string };
 
@@ -28,25 +30,25 @@ const ProjectSlide = ({ title, desc, img }: Props) => (
 const options = [
     {
         idx: 0,
-        name: "Mansion",
+        title: "Mansion",
         desc: "Just a house",
         img: Property1,
     },
     {
         idx: 1,
-        name: "Mansion",
+        title: "Mansion",
         desc: "Just a house",
         img: Property2,
     },
     {
         idx: 2,
-        name: "Mansion",
+        title: "Mansion",
         desc: "Just a house",
         img: Property3,
     },
     {
         idx: 3,
-        name: "Mansion",
+        title: "Mansion",
         desc: "Just a house",
         img: Property4,
     },
@@ -64,7 +66,15 @@ const ProjectSection = () => (
             </div>
             <div className="row">
                 <div className="col-md-12">
-                    <div className="owl-carousel owl-theme"></div>
+                    <div className="owl-carousel owl-theme">
+                        <SwiperSection slidesPerView={2}>
+                            {options.map(item => (
+                                <SwiperSlide key={item.idx}>
+                                    <ProjectSlide {...item} />
+                                </SwiperSlide>
+                            ))}
+                        </SwiperSection>
+                    </div>
                 </div>
             </div>
         </div>

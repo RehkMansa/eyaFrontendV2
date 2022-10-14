@@ -1,22 +1,20 @@
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 import "swiper/css/bundle";
+import { ReactNode } from "react";
 
-type Props = { slides: number; children: {}[] };
+type Props = { slidesPerView: number; children: ReactNode };
 
-const SwiperSection = ({ slides, children }: Props) => (
+const SwiperSection = ({ slidesPerView: slides, children }: Props) => (
     <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
-        slidesPerView={3}
+        slidesPerView={slides}
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
     >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+        {children}
     </Swiper>
 );
 
