@@ -3,6 +3,7 @@ import Slider1 from "../../assets/img/slider/1.jpg";
 import Slider2 from "../../assets/img/slider/2.jpg";
 import CarouselSection from "../../components/blocks/CarouselSection";
 import AboutSection from "../../components/sections/AboutSection";
+import ProjectSection from "../../components/sections/Project";
 
 const Wrapper = styled.div`
     height: 100vh;
@@ -87,7 +88,6 @@ const Homepage = () => (
             <Wrapper className="">
                 <CarouselSection imageArr={carouselItems} />
             </Wrapper>
-
             <div className="left-panel">
                 <ul className="social-left clearfix">
                     {socialIcons.map(item => (
@@ -99,6 +99,7 @@ const Homepage = () => (
             </div>
         </header>
         <AboutSection />
+        <ProjectSection />
     </>
 );
 
