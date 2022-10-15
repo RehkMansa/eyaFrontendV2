@@ -9,12 +9,12 @@ const Image = styled.img`
     height: 370px;
     object-fit: cover;
 
-    @media screen and (max-width: 576px) {
-        height: 250px;
-    }
-
     @media screen and (max-width: 768px) {
         height: 300px;
+    }
+
+    @media screen and (max-width: 576px) {
+        height: 250px;
     }
 `;
 
