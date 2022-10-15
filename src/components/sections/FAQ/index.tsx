@@ -57,7 +57,7 @@ const questionsRight = [
 ];
 
 const FAQ = () => {
-    const [firstTab, setFirstTab] = useState<number>(0);
+    const [firstTab, setFirstTab] = useState<number>(1);
     const [secondTab, setSecondTab] = useState<number>(-1);
     /* 
         onclick

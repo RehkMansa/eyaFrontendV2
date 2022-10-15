@@ -1,4 +1,4 @@
-import AboutImage from "../../../assets/img/about.jpg";
+import AboutImage from "../../../assets/img/eyahomes/7.jpg";
 
 const AboutSection = () => (
     <section className="about section-padding">

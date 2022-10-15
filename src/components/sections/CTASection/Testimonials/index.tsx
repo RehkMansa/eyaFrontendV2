@@ -1,7 +1,10 @@
+import styled from "styled-components";
 import { SwiperSlide } from "swiper/react";
 import SwiperSection from "../../../blocks/SwiperSection";
 import Quote from "../../../../assets/img/quot.png";
 import BgImage from "../../../../assets/img/banner2.jpg";
+
+const Section = styled.section``;
 
 type Props = { testimonial: string; name: string; desc: string };
 
@@ -45,11 +48,11 @@ const options = [
 ];
 
 const Testimonials = () => (
-    <section className="testimonials">
+    <Section className="testimonials">
         <div
             className="background bg-img bg-fixed section-padding pb-0"
             data-background="img/banner2.jpg"
-            data-overlay-dark="3"
+            data-overlay-dark="8"
             style={{ backgroundImage: `url(${BgImage})` }}
         >
             <div className="container">
@@ -58,10 +61,7 @@ const Testimonials = () => (
                         <div className="vid-area" />
                     </div>
                     <div className="col-md-5 offset-md-1">
-                        <div
-                            className="testimonials-box animate-box"
-                            data-animate-effect="fadeInUp"
-                        >
+                        <div className="testimonials-box animate-box">
                             <div className="head-box text-center">
                                 <h4>What Client's Say?</h4>
                             </div>
@@ -79,7 +79,7 @@ const Testimonials = () => (
                 </div>
             </div>
         </div>
-    </section>
+    </Section>
 );
 
 export default Testimonials;

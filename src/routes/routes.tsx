@@ -2,6 +2,7 @@ import { useRoutes } from "react-router-dom";
 import MainLayout from "../components/layouts/MainLayout";
 import AboutPage from "../pages/aboutpage";
 import ContactUs from "../pages/contactUs";
+import Error404 from "../pages/Error404";
 import Homepage from "../pages/homepage";
 import Properties from "../pages/properties";
 import SingleProperty from "../pages/properties/SingleProperty";
@@ -36,6 +37,10 @@ const AllRoutes = () => {
                 {
                     path: "contact-us",
                     element: <ContactUs />,
+                },
+                {
+                    path: "*",
+                    element: <Error404 />,
                 },
             ],
         },
