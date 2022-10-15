@@ -3,6 +3,7 @@ import MainLayout from "../components/layouts/MainLayout";
 import AboutPage from "../pages/aboutpage";
 import Homepage from "../pages/homepage";
 import Properties from "../pages/properties";
+import SingleProperty from "../pages/properties/SingleProperty";
 
 const AllRoutes = () => {
     const routes = useRoutes([
@@ -28,8 +29,8 @@ const AllRoutes = () => {
                     element: <Properties />,
                 },
                 {
-                    path: "properties:id",
-                    element: <Properties />,
+                    path: "properties/:id",
+                    element: <SingleProperty />,
                 },
             ],
         },

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Property1 from "../../assets/img/projects/1.jpg";
 import Property2 from "../../assets/img/projects/2.jpg";
@@ -62,9 +63,9 @@ const Card = ({ img, meta, title, price, idx }: Props) => (
             <h4>{title}</h4>
             <p>{price}</p>
             <div className="butn-dark mt-15">
-                <a href="cotton-house.html">
+                <Link to={`/properties/${idx}`}>
                     <span>Discover</span>
-                </a>
+                </Link>
             </div>
         </div>
     </div>
