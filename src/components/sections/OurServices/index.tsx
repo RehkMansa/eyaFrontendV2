@@ -7,13 +7,13 @@ type Props = { title: string; desc: string; img: string; idx: number };
 const Card = ({ title, desc, img, idx }: Props) => (
     <div className="col-md-4">
         <div className="item">
-            <a href="architecture.html">
+            <p>
                 <img src={img} alt="" />
                 <h5>{title}</h5>
                 <div className="line" />
                 <p>{desc}</p>
                 <div className="numb">0{idx}</div>
-            </a>
+            </p>
         </div>
     </div>
 );

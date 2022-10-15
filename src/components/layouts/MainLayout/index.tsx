@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../../blocks/Footer";
 import Header from "../../blocks/Header";
 import BannerHeader from "../HeroSection/Banner";
 import HomepageHeader from "../HeroSection/Homepage";
@@ -15,6 +16,7 @@ const MainLayout = ({ isHomePage }: { isHomePage: boolean }) => (
             </section>
             {!isHomePage && <BannerHeader />}
             <Outlet />
+            <Footer />
         </div>
     </main>
 );
