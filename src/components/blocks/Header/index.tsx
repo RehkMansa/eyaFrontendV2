@@ -95,7 +95,7 @@ const Header = () => {
                     </span>
                 </Button>
                 <div
-                    className={`collapse navbar-collapse ${show && "show"}`}
+                    className={`collapse navbar-collapse ${show ? "show" : ""}`}
                     id="navbarSupportedContent"
                 >
                     <ul className="navbar-nav ml-auto">

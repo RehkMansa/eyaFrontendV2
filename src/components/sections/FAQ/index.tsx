@@ -17,13 +17,13 @@ type Props = {
 };
 
 const Card = ({ open, idx, question, answer, toggleSection }: Props) => (
-    <li className={`accordion block${open && " active-block"}`}>
+    <li className={`accordion block ${open ? " active-block" : ""}`}>
         <ButtonWrap onClick={toggleSection} className="acc-btn">
             <span className="count">{idx}.</span>
             {question}
             {open ? <MinusIcon /> : <PlusIcon />}
         </ButtonWrap>
-        <div className="acc-content current">
+        <div className={`acc-content ${open ? "current" : ""}`}>
             <div className="content">
                 <div className="text">{answer}</div>
             </div>
