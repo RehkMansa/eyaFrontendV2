@@ -57,7 +57,7 @@ const questionsRight = [
 ];
 
 const FAQ = () => {
-    const [firstTab, setFirstTab] = useState<number>(-1);
+    const [firstTab, setFirstTab] = useState<number>(0);
     const [secondTab, setSecondTab] = useState<number>(-1);
     /* 
         onclick
@@ -70,7 +70,7 @@ const FAQ = () => {
             return idx;
         }
 
-        return idx;
+        return -1;
     };
 
     return (
