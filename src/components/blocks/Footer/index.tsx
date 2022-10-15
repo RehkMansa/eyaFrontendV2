@@ -26,7 +26,7 @@ const Card = ({ title, content }: { title: string; content: string }) => (
     </div>
 );
 
-const footerOptions = [
+export const footerOptions = [
     {
         idx: 1,
         title: "Phone",
