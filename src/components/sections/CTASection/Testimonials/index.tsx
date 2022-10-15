@@ -24,23 +24,23 @@ const options = [
     {
         idx: 0,
         testimonial:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, laboriosam?",
-        name: "John Doe",
-        desc: "A doe man",
+            "I love the energy given by the team when showing properties. The prices for their houses are very affordable",
+        name: "Tochukwu Rapheal",
+        desc: "Estate Services",
     },
     {
         idx: 0,
         testimonial:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, laboriosam?",
-        name: "John Doe",
-        desc: "A doe man",
+            "I patronized their services in getting a home for myself, it was really worth, the design and structure were nice",
+        name: "Onu Chidera",
+        desc: "Housing",
     },
     {
         idx: 0,
         testimonial:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, laboriosam?",
-        name: "John Doe",
-        desc: "A doe man",
+            "I'm currently a long time partner and investor. I'm very happy with their investment returns on properties.",
+        name: "Ile Idoko",
+        desc: "Partnership",
     },
 ];
 

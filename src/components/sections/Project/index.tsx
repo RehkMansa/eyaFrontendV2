@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { SwiperSlide } from "swiper/react";
 import Property1 from "../../../assets/img/projects/1.jpg";
 import Property2 from "../../../assets/img/projects/2.jpg";
@@ -7,10 +8,19 @@ import SwiperSection from "../../blocks/SwiperSection";
 
 type Props = { title: string; desc: string; img: string };
 
+const Image = styled.img`
+    height: 350px;
+    object-fit: cover;
+
+    @media screen and (max-width: 576px) {
+        height: 300px;
+    }
+`;
+
 const ProjectSlide = ({ title, desc, img }: Props) => (
     <div className="item">
         <div className="position-re o-hidden">
-            <img src={img} alt="" />
+            <Image src={img} alt="" />
         </div>
         <div className="con">
             <h6>
@@ -30,26 +40,26 @@ const ProjectSlide = ({ title, desc, img }: Props) => (
 const options = [
     {
         idx: 0,
-        title: "Mansion 1",
-        desc: "Just a house",
+        title: "SEMI FINISHED BUNGALOW",
+        desc: "Price: ₦22 Million",
         img: Property1,
     },
     {
         idx: 1,
-        title: "Mansion 2",
-        desc: "Just a house",
+        title: "CARCASS FOR TERRACE DUPLEX",
+        desc: "Price: ₦16 Million",
         img: Property2,
     },
     {
         idx: 2,
-        title: "Mansion 3",
-        desc: "Just a house",
+        title: "LAND PRICE FOR SEMI-DETACHED DUPLEX",
+        desc: "Price: ₦3.5 Million",
         img: Property3,
     },
     {
         idx: 3,
-        title: "Mansion 4",
-        desc: "Just a house",
+        title: "LAND PRICE FOR FULLY-DETACHED DUPLEX ",
+        desc: "Price: ₦5.5 Million",
         img: Property4,
     },
 ];
@@ -60,7 +70,7 @@ const ProjectSection = () => (
             <div className="row">
                 <div className="col-md-12">
                     <h2 className="section-title">
-                        Our <span>Projects</span>
+                        Our <span>Properties</span>
                     </h2>
                 </div>
             </div>
