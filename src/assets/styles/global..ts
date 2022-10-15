@@ -2289,23 +2289,23 @@ blockquote cite:before {
 }
 
 /* ======= Projects3 style ======= */
-.bauen-project {}
-.bauen-project-section {
+.eyahomes-project {}
+.eyahomes-project-section {
     padding-top: 120px;
 }
-.bauen-project-page-section {
+.eyahomes-project-page-section {
     padding-bottom: 80px;
 }
-.bauen-project-items .col-md-6:nth-child(2) {
+.eyahomes-project-items .col-md-6:nth-child(2) {
     margin-top: 75px;
 }
-.bauen-project-filter {
+.eyahomes-project-filter {
     width: 100%;
     padding-bottom: 30px;
     padding-left: 0px;
     position: relative;
 }
-.bauen-project-filter li {
+.eyahomes-project-filter li {
     margin-right: 15px;
     display: inline-block;
     font-size: 16px;
@@ -2314,10 +2314,10 @@ blockquote cite:before {
     font-family: 'Didact Gothic', sans-serif;
     font-weight: 400;
 }
-.bauen-project-filter li:last-child {
+.eyahomes-project-filter li:last-child {
     margin-right: 0;
 }
-.bauen-project-filter li.active {
+.eyahomes-project-filter li.active {
     color: #b19777;
     content: "";
     left: 0;
@@ -2327,23 +2327,23 @@ blockquote cite:before {
     -o-transition: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
     transition: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
 }
-.bauen-project-filter li:hover {
+.eyahomes-project-filter li:hover {
     color: #b19777;
 }
-.bauen-project-wrap {
+.eyahomes-project-wrap {
     padding-bottom: 90px;
     padding-right: 0;
     padding-left: 90px;
     position: relative;
 }
-.bauen-project-wrap:hover img {
+.eyahomes-project-wrap:hover img {
     -ms-transform: scale(0.95, 0.95);
     /* IE 9 */
     -webkit-transform: scale(0.95, 0.95);
     /* Safari */
     transform: scale(0.95, 0.95);
 }
-.bauen-project-wrap h3 {
+.eyahomes-project-wrap h3 {
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     line-height: 1.25em;
@@ -2353,7 +2353,7 @@ blockquote cite:before {
     color: #fff;
     margin-bottom: 0px;
 }
-.bauen-project-wrap p {
+.eyahomes-project-wrap p {
     color: #b19777;
     font-family: 'Oswald', sans-serif;
     font-size: 13px;
@@ -2364,7 +2364,7 @@ blockquote cite:before {
     align-items: center;
     display: inline-flex;
 }
-.bauen-project-content {
+.eyahomes-project-content {
     position: absolute;
     left: 50px;
     bottom: 89px;
@@ -2372,7 +2372,7 @@ blockquote cite:before {
     padding: 20px 20px 20px 0;
     margin-right: 20px;
 }
-.bauen-project-link {
+.eyahomes-project-link {
     color: #b19777;
     font-size: 17px;
     font-weight: 400;
@@ -2383,7 +2383,7 @@ blockquote cite:before {
     transition: all 0.3s ease-in-out;
     padding-left: 80px;
 }
-.bauen-project-link:before {
+.eyahomes-project-link:before {
     content: '';
     display: inline-block;
     width: 80px;
@@ -2394,12 +2394,12 @@ blockquote cite:before {
     bottom: 15px;
     transition: all 0.3s ease-in-out;
 }
-.bauen-project-link:before:hover {
+.eyahomes-project-link:before:hover {
     padding-left: 5px;
     color: #b19777;
     transition: all 0.3s ease-in-out;
 }
-.bauen-project-link i {
+.eyahomes-project-link i {
     position: absolute;
     right: 0;
     top: 0;
@@ -2409,43 +2409,43 @@ blockquote cite:before {
     font-size: 14px;
     transition: all 0.3s ease-in-out;
 }
-.bauen-project-link:hover i {
+.eyahomes-project-link:hover i {
     padding-left: 5px;
     color: #b19777;
     transition: all 0.3s ease-in-out;
 }
-.bauen-project-link:hover {
+.eyahomes-project-link:hover {
     color: #b19777;
 }
 @media (max-width: 991px) {
-    .bauen-project-wrap {
+    .eyahomes-project-wrap {
         padding-left: 20px;
     }
-    .bauen-project-wrap h3 {
+    .eyahomes-project-wrap h3 {
         font-size: 22px;
     }
-    .bauen-project-content {
+    .eyahomes-project-content {
         left: 0px;
         bottom: 0px;
     }
 }
 @media all and (max-width: 767px) {
-    .bauen-project-items .col-md-6:nth-child(2) {
+    .eyahomes-project-items .col-md-6:nth-child(2) {
         margin-top: 0;
     }
 }
 @media all and (max-width: 575px) {
-    .bauen-project-filter li {
+    .eyahomes-project-filter li {
         margin-right: 10px;
         font-size: 17px;
     }
-    .bauen-project-filter li:last-child {
+    .eyahomes-project-filter li:last-child {
         margin-right: 0;
     }
-    .bauen-project-items .single-item {
+    .eyahomes-project-items .single-item {
         padding-bottom: 30px;
     }
-    .bauen-project-wrap {
+    .eyahomes-project-wrap {
         padding: 0;
     }
 }
@@ -2533,16 +2533,16 @@ blockquote cite:before {
   overflow: hidden;
   padding-bottom: 30px;
 }
-.bauen-gallery-items .col-md-6:nth-child(2) {
+.eyahomes-gallery-items .col-md-6:nth-child(2) {
     margin-top: 0px;
 }
-.bauen-gallery-filter {
+.eyahomes-gallery-filter {
     width: 100%;
     padding-bottom: 30px;
     padding-left: 0px;
     position: relative;
 }
-.bauen-gallery-filter li {
+.eyahomes-gallery-filter li {
     margin-right: 15px;
     display: inline-block;
     font-size: 16px;
@@ -2551,10 +2551,10 @@ blockquote cite:before {
     font-family: 'Didact Gothic', sans-serif;
     font-weight: 400;
 }
-.bauen-gallery-filter li:last-child {
+.eyahomes-gallery-filter li:last-child {
     margin-right: 0;
 }
-.bauen-gallery-filter li.active {
+.eyahomes-gallery-filter li.active {
     color: #b19777;
     content: "";
     left: 0;
@@ -2564,7 +2564,7 @@ blockquote cite:before {
     -o-transition: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
     transition: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
 }
-.bauen-gallery-filter li:hover {
+.eyahomes-gallery-filter li:hover {
     color: #b19777;
 }
 .gallery-masonry-wrapper .gallery-masonry-item-img-link {
@@ -2643,19 +2643,19 @@ blockquote cite:before {
     margin-right: auto;
   }
     
-     .bauen-gallery-items .col-md-6:nth-child(2) {
+     .eyahomes-gallery-items .col-md-6:nth-child(2) {
         margin-top: 0;
     }
 }
 @media all and (max-width: 575px) {
-    .bauen-gallery-filter li {
+    .eyahomes-gallery-filter li {
         margin-right: 10px;
         font-size: 17px;
     }
-    .bauen-gallery-filter li:last-child {
+    .eyahomes-gallery-filter li:last-child {
         margin-right: 0;
     }
-    .bauen-gallery-items .single-item {
+    .eyahomes-gallery-items .single-item {
         padding-bottom: 30px;
     }
  
@@ -3012,12 +3012,12 @@ button.mfp-arrow {
 
 
 /* ======= Blog 1 style ======= */
-.bauen-blog .item {
+.eyahomes-blog .item {
     position: relative;
     overflow: hidden;
     margin-bottom: 30px;
 }
-.bauen-blog .item:hover img {
+.eyahomes-blog .item:hover img {
     -webkit-filter: none;
     filter: none;
     -webkit-transform: scale(1.09, 1.09);
@@ -3029,15 +3029,15 @@ button.mfp-arrow {
     -ms-transition: all 1s ease;
     transition: all 1s ease;
 }
-.bauen-blog .item:hover .con {
+.eyahomes-blog .item:hover .con {
     bottom: 0;
 }
-.bauen-blog .item img {
+.eyahomes-blog .item img {
     -webkit-transition: all .5s;
     transition: all .5s;
     -webkit-filter: brightness(100%);
 }
-.bauen-blog .item .con {
+.eyahomes-blog .item .con {
     margin: -120px 20px 75px;
     padding: 15px 15px 25px 15px;
     background-color: #323232 !important;
@@ -3049,27 +3049,27 @@ button.mfp-arrow {
     bottom: -55px;
     position: relative;
 }
-.bauen-blog .item .con .category {
+.eyahomes-blog .item .con .category {
     font-size: 12px;
     font-weight: 400;
     margin-bottom: 0;
     letter-spacing: 1px;
 }
-.bauen-blog .item .con .category a {
+.eyahomes-blog .item .con .category a {
     margin-right: 5px;
     position: relative;
 }
-.bauen-blog .item .con .category a:hover {
+.eyahomes-blog .item .con .category a:hover {
     color: #b19777;
 }
-.bauen-blog .item .con .category a:last-child {
+.eyahomes-blog .item .con .category a:last-child {
     margin-right: 0;
 }
-.bauen-blog .item .con .category a:last-child:after {
+.eyahomes-blog .item .con .category a:last-child:after {
     display: none;
 }
-.bauen-blog .item .con h5,
-.bauen-blog .item .con h5 a {
+.eyahomes-blog .item .con h5,
+.eyahomes-blog .item .con h5 a {
     color: #b19777;
     font-size: 25px;
     font-family: 'Oswald', sans-serif;
@@ -3077,15 +3077,15 @@ button.mfp-arrow {
     margin-bottom: 0px;
     letter-spacing: 1px;
 }
-.bauen-blog .item .con h5:hover,
-.bauen-blog .item .con h5 a:hover {
+.eyahomes-blog .item .con h5:hover,
+.eyahomes-blog .item .con h5 a:hover {
     color: #b19777;
 }
-.bauen-blog .item .con p {
+.eyahomes-blog .item .con p {
     color: #fff;
     font-size: 17px;
 }
-.bauen-blog .item .con i {
+.eyahomes-blog .item .con i {
     color: #fff;
     font-size: 20px;
 }
@@ -3093,11 +3093,11 @@ button.mfp-arrow {
 
 
 /* ======= Blog 2 style ======= */
-.bauen-blog2 .img {
+.eyahomes-blog2 .img {
   position: relative;
     overflow: hidden;
 }
-.bauen-blog2 .img:hover img {
+.eyahomes-blog2 .img:hover img {
     -webkit-filter: none;
     filter: none;
     -webkit-transform: scale(1.09, 1.09);
@@ -3108,27 +3108,27 @@ button.mfp-arrow {
     -ms-transition: all 1s ease;
     transition: all 1s ease;
 }
-.bauen-blog2 .img img {
+.eyahomes-blog2 .img img {
     -webkit-transition: all .5s;
     transition: all .5s;
 }
-.bauen-blog2 .content {
+.eyahomes-blog2 .content {
   width: 100%;
   padding: 30px 45px;
 }
-.bauen-blog2 .content .date {
+.eyahomes-blog2 .content .date {
   display: table-cell;
   position: relative;
   width: 80px;
   z-index: 2;
 }
-.bauen-blog2 .content .date h3 {
+.eyahomes-blog2 .content .date h3 {
     font-size: 65px;
     font-weight: 500;
     color: #b19777;
     margin-bottom: 0px;
 }
-.bauen-blog2 .content .date h6 {
+.eyahomes-blog2 .content .date h6 {
     color: #999;
     letter-spacing: 2px;
     font-size: 10px;
@@ -3136,12 +3136,12 @@ button.mfp-arrow {
     text-transform: uppercase;
     font-weight: 300;
 }
-.bauen-blog2 .content .cont {
+.eyahomes-blog2 .content .cont {
   display: table-cell;
   vertical-align: middle;
   padding-left: 15px;
 }
-.bauen-blog2 .content .cont h4 {
+.eyahomes-blog2 .content .cont h4 {
     margin: 15px 0;
     font-size: 20px;
     color: #fff;
@@ -3150,7 +3150,7 @@ button.mfp-arrow {
     text-transform: uppercase;
     line-height: 1.5em;
 }
-.bauen-blog2 .content .cont .more {
+.eyahomes-blog2 .content .cont .more {
   font-size: 13px;
   font-weight: 300;
   letter-spacing: 2px;
@@ -3159,7 +3159,7 @@ button.mfp-arrow {
   padding-left: 40px;
   position: relative;
 }
-.bauen-blog2 .content .cont .more:after {
+.eyahomes-blog2 .content .cont .more:after {
   content: '';
   width: 30px;
   height: 1px;
@@ -3168,25 +3168,25 @@ button.mfp-arrow {
   top: 50%;
   left: 0px;
 }
-.bauen-blog2 .content .cont .more:hover {
+.eyahomes-blog2 .content .cont .more:hover {
    color: #fff; 
 }
-.bauen-blog2 .content .info h6 {
+.eyahomes-blog2 .content .info h6 {
     font-size: 11px;
     letter-spacing: 2px;
     color: #999;
     font-family: 'Didact Gothic', sans-serif;
     text-transform: uppercase;
 }
-.bauen-blog2 .content .info .tags {
+.eyahomes-blog2 .content .info .tags {
   color: #b19777;
 }
 @media screen and (max-width: 991px) {
-    .bauen-blog2 .content {
+    .eyahomes-blog2 .content {
     padding: 0 30px;
     margin-top: 40px;
     }
-    .bauen-blog2 .content .cont h4 {
+    .eyahomes-blog2 .content .cont h4 {
         line-height: 1.25em;
     }
     .order2 {
@@ -3201,16 +3201,16 @@ button.mfp-arrow {
   }  
 }
 @media screen and (max-width: 480px) {
-    .bauen-blog2 .content {
+    .eyahomes-blog2 .content {
     padding: 0 15px;
   }
-    .bauen-blog2 .content .date {
+    .eyahomes-blog2 .content .date {
     width: 60px;
   }
-    .bauen-blog2 .content .info .tags {
+    .eyahomes-blog2 .content .info .tags {
     margin: 5px 0 0;
   }
-    .bauen-blog2 .content .date h3 {
+    .eyahomes-blog2 .content .date h3 {
     font-size: 40px;
   }
 }
@@ -3218,14 +3218,14 @@ button.mfp-arrow {
 
 
 /* ======= Blog 3 style ======= */
-.bauen-blog3 .item {
+.eyahomes-blog3 .item {
     margin-bottom: 30px;
 }
-.bauen-blog3 .post-img {
+.eyahomes-blog3 .post-img {
     position: relative;
     overflow: hidden;
 }
-.bauen-blog3 .post-img:hover img {
+.eyahomes-blog3 .post-img:hover img {
     -webkit-filter: none;
     filter: none;
     -webkit-transform: scale(1.09, 1.09);
@@ -3236,17 +3236,17 @@ button.mfp-arrow {
     -ms-transition: all 1s ease;
     transition: all 1s ease;
 }
-.bauen-blog3 .post-img a {
+.eyahomes-blog3 .post-img a {
     display: block;
 }
-.bauen-blog3 .post-img img {
+.eyahomes-blog3 .post-img img {
     -webkit-transition: all .5s;
     transition: all .5s;
 }
-.bauen-blog3 .post-cont {
+.eyahomes-blog3 .post-cont {
     padding: 30px 0;
 }
-.bauen-blog3 .post-cont .tag {
+.eyahomes-blog3 .post-cont .tag {
     display: block;
     font-weight: 400;
 	font-size: 12px;
@@ -3256,7 +3256,7 @@ button.mfp-arrow {
     text-transform: uppercase;
 	margin-bottom: 5px;
 }
-.bauen-blog3 .post-cont h5 {
+.eyahomes-blog3 .post-cont h5 {
 	color: #fff;
     font-size: 25px;
     margin-bottom: 15px;
@@ -3264,13 +3264,13 @@ button.mfp-arrow {
     letter-spacing: 3px;
     text-transform: uppercase;
 }
-.bauen-blog3 .post-cont h5 a {
+.eyahomes-blog3 .post-cont h5 a {
     color: #fff;
 }
-.bauen-blog3 .post-cont h5 a:hover {
+.eyahomes-blog3 .post-cont h5 a:hover {
     color: #b19777;
 }
-.bauen-blog3 .post-cont .date {
+.eyahomes-blog3 .post-cont .date {
     margin-top: 0px;
     font-size: 12px;
     text-align: right;
@@ -3278,10 +3278,10 @@ button.mfp-arrow {
 	text-transform: uppercase;
 	margin-bottom: 5px;
 }
-.bauen-blog3 .post-cont .date a {
+.eyahomes-blog3 .post-cont .date a {
     color: #b19777;
 }
-.bauen-blog3 .post-cont i {
+.eyahomes-blog3 .post-cont i {
     color: #777;
 	margin: 0 10px;
 	font-size: 12px;
@@ -3384,16 +3384,16 @@ button.mfp-arrow {
     color: #fff;
 }
 /* pagination */
-.bauen-pagination-wrap {
+.eyahomes-pagination-wrap {
     padding: 0;
     margin: 0;
     text-align: center;
 }
-.bauen-pagination-wrap li {
+.eyahomes-pagination-wrap li {
     display: inline-block;
     margin: 0 5px;
 }
-.bauen-pagination-wrap li a {
+.eyahomes-pagination-wrap li a {
     background: transparent;
     display: inline-block;
     width: 40px;
@@ -3407,23 +3407,23 @@ button.mfp-arrow {
     font-size: 13px;
     border-radius: 100%;
 }
-.bauen-pagination-wrap li a i {
+.eyahomes-pagination-wrap li a i {
     font-size: 11px;
 }
-.bauen-pagination-wrap li a:hover {
+.eyahomes-pagination-wrap li a:hover {
     opacity: 1;
     text-decoration: none;
     background: transparent;
     border: 1px solid #b19777;
     color: #b19777;
 }
-.bauen-pagination-wrap li a.active {
+.eyahomes-pagination-wrap li a.active {
     background-color: transparent;
     border: 1px solid #b19777;
     color: #b19777;
 }
 @media screen and (max-width: 768px) {
-    .bauen-pagination-wrap {
+    .eyahomes-pagination-wrap {
         padding: 0;
         margin: 0;
         text-align: center;
@@ -3433,27 +3433,27 @@ button.mfp-arrow {
 
 
 /* ======= Blog 4 style  ======= */
-.bauen-blog4 {
+.eyahomes-blog4 {
     position: relative;
     margin-bottom: 90px;
 }
-.bauen-blog4:last-child {
+.eyahomes-blog4:last-child {
     margin-bottom: 20px;
 }
-.bauen-blog4 figure {
+.eyahomes-blog4 figure {
     margin: 0;
     position: relative;
     width: 66.666667%;
     margin-left: auto;
 }
-.bauen-blog4.left figure {
+.eyahomes-blog4.left figure {
     margin-left: 0;
     margin-right: auto;
 }
-.bauen-blog4 figure img:hover {
+.eyahomes-blog4 figure img:hover {
     transform: scale(0.95);
 }
-.bauen-blog4 .caption {
+.eyahomes-blog4 .caption {
     background: #323232;
     position: absolute;
     left: 0;
@@ -3464,21 +3464,21 @@ button.mfp-arrow {
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
 }
-.bauen-blog4.left .caption {
+.eyahomes-blog4.left .caption {
     left: auto;
     right: 0;
     background: #323232;
     padding: 4%;
 }
-.bauen-blog4 .caption h4,
-.bauen-blog4 .caption h4 a {
+.eyahomes-blog4 .caption h4,
+.eyahomes-blog4 .caption h4 a {
     font-size: 27px;
     color: #fff;
     letter-spacing: 5px;
     font-weight: 300;
     text-transform: uppercase;
 }
-.bauen-blog4 .caption h6 {
+.eyahomes-blog4 .caption h6 {
     display: inline-block;
     padding: 8px 20px;
     background-color: #b19777;
@@ -3491,7 +3491,7 @@ button.mfp-arrow {
     -ms-flex-item-align: start;
     align-self: flex-start;
 }
-.bauen-blog4 .caption .info-wrapper {
+.eyahomes-blog4 .caption .info-wrapper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3508,25 +3508,25 @@ button.mfp-arrow {
     -ms-flex-align: center;
     align-items: center;
 }
-.bauen-blog4 .caption .info-wrapper .more {
+.eyahomes-blog4 .caption .info-wrapper .more {
     color: #999;
     text-decoration: none;
     font-size: 14px;
 }
-.bauen-blog4 .caption .info-wrapper .more i {
+.eyahomes-blog4 .caption .info-wrapper .more i {
     color: #999;
     font-size: 10px;
 }
-.bauen-blog4 .caption .info-wrapper .date {
+.eyahomes-blog4 .caption .info-wrapper .date {
     color: #999;
     font-size: 14px;
 }
 @media (max-width: 991.98px) {
-    .bauen-blog4 figure {
+    .eyahomes-blog4 figure {
         width: auto;
         margin: 0;
     }
-    .bauen-blog4 .caption {
+    .eyahomes-blog4 .caption {
         position: relative;
         left: 0;
         top: 0;
@@ -3584,46 +3584,46 @@ hr.border-2 {
 
 
 /* ======= Post style ======= */
-.bauen-post-section {
+.eyahomes-post-section {
     padding-top: 120px;
 }
-.bauen-comment-section {
+.eyahomes-comment-section {
     padding-top: 60px;
     margin-bottom: 60px;
 }
-.bauen-comment-section h3 {
+.eyahomes-comment-section h3 {
     font-size: 16px;
     color: #b19777;
     font-family: 'Didact Gothic', sans-serif;
     font-weight: 400;
 }
-.bauen-comment-section h3 span {
+.eyahomes-comment-section h3 span {
     font-size: 12px;
     color: #999;
     font-weight: 400;
     margin-left: 15px;
 }
-.bauen-post-caption h1 {
+.eyahomes-post-caption h1 {
     margin-bottom: 20px;
     font-size: 40px;
     text-transform: uppercase;
 }
-.bauen-post-comment-wrap {
+.eyahomes-post-comment-wrap {
     display: flex;
     margin-bottom: 60px;
 }
-.bauen-user-comment {
+.eyahomes-user-comment {
     margin-right: 30px;
     flex: 0 0 auto;
 }
-.bauen-user-comment img {
+.eyahomes-user-comment img {
     border-radius: 100%;
     width: 100px;
 }
-.bauen-user-content {
+.eyahomes-user-content {
     margin-right: 26px;
 }
-.bauen-repay {
+.eyahomes-repay {
     font-size: 14px;
     color: #b19777;
     margin: 0;
@@ -3633,7 +3633,7 @@ hr.border-2 {
 
 
 /* ======= Contact style ======= */
-#bauen-contactMap {
+#eyahomes-contactMap {
     width: 100%;
     height: 550px;
 }
@@ -4864,11 +4864,11 @@ hr.border-2 {
     .portfolio .filtering span {
         margin-bottom: 10px;
     }
-    .bauen-blog .item .con h5,
-    .bauen-blog .item .con h5 a {
+    .eyahomes-blog .item .con h5,
+    .eyahomes-blog .item .con h5 a {
         font-size: 20px;
     }
-    .bauen-comment-section h3 span {
+    .eyahomes-comment-section h3 span {
         margin-left: 0px;
     }
     .main-footer .sub-footer p.right {

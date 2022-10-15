@@ -4,6 +4,17 @@
     </a>
 ); */
 
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+    @media screen and (max-width: 576px) {
+        & .row p.sm-text-center {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+    }
+`;
+
 const Card = ({ title, content }: { title: string; content: string }) => (
     <div className="col-md-4 mb-30">
         <div className="item fotcont">
@@ -44,25 +55,28 @@ const Footer = () => (
             </div>
         </div>
         <div className="sub-footer">
-            <div className="container">
+            <Wrapper className="container">
                 <div className="row">
-                    <div className="col-md-4">
-                        <div className="text-left">
-                            <p>© 2022 Bauen. All right reserved.</p>
+                    <div className="col-md-6">
+                        <div>
+                            <p className="sm-text-center">
+                                © {new Date().getFullYear()} My Eyahomes. All right
+                                reserved.
+                            </p>
                         </div>
                     </div>
-                    <div className="col-md-4 abot">
+                    {/* <div className="col-md-4 abot">
                         <div className="social-icon" />
-                    </div>
-                    <div className="col-md-4">
-                        <p className="right">
+                    </div> */}
+                    <div className="col-md-6">
+                        <p className="right sm-text-center">
                             <a target="_blank" href="https://swizel.con" rel="noreferrer">
                                 Designed by Swizel
                             </a>
                         </p>
                     </div>
                 </div>
-            </div>
+            </Wrapper>
         </div>
     </footer>
 );

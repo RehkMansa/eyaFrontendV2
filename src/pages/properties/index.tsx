@@ -72,7 +72,7 @@ const Card = ({ img, meta, title, price, idx }: Props) => (
 );
 
 const Properties = () => (
-    <section className="bauen-project section-padding2">
+    <section className="eyahomes-project section-padding2">
         <div className="container">
             <div className="row">
                 <div className="col-md-12 mb-30 text-center animate-box fadeInUp animated">

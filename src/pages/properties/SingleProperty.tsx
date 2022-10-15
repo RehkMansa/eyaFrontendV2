@@ -2,6 +2,18 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { propertiesArray } from ".";
 
+const RowWrap = styled.div`
+    @media screen and (max-width: 576px) {
+        margin-bottom: 10px;
+    }
+`;
+
+const ProductName = styled.h2`
+    @media screen and (max-width: 576px) {
+        text-transform: capitalize;
+    }
+`;
+
 const Img = styled.img`
     height: 430px;
     object-fit: cover;
@@ -16,10 +28,10 @@ const Img = styled.img`
 `;
 
 const Row = ({ title, value }: { title: string; value: string }) => (
-    <div className="col-md-3 mb-15">
+    <RowWrap className="col-md-3 col-6 mb-15">
         <h5>{title}</h5>
         <h6>{value}</h6>
-    </div>
+    </RowWrap>
 );
 
 const SingleProperty = () => {
@@ -45,8 +57,12 @@ const SingleProperty = () => {
                             <div className="col-md-7 offset-md-5">
                                 <div className="project-bar">
                                     <div className="row justify-content-between align-items-center text-left text-lg-start">
-                                        <Row title="Land" value="20 hectares" />
-                                        <Row title="Estate" value="10 rooms" />
+                                        <Row title="Type of property" value="Land" />
+                                        <Row
+                                            title="Property details"
+                                            value="12 hectares"
+                                        />
+                                        <Row title="Category" value="Rent" />
                                         <Row title="Location" value="Abuja" />
                                     </div>
                                 </div>
@@ -55,8 +71,10 @@ const SingleProperty = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-12 mt-10">
-                        <h2 className="mt-30 section-title2">{currentProperty?.title}</h2>
+                    <div className="col-md-12">
+                        <ProductName className="mt-30 section-title2">
+                            {currentProperty?.title.toLowerCase()}
+                        </ProductName>
                         <p className="mb-30">{currentProperty?.price}</p>
                         {/* Loop features here */}
                         <ul className="list-unstyled page-list mb-30">
