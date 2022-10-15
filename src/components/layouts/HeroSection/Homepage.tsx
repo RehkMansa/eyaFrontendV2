@@ -37,11 +37,12 @@ const CarouselItem = () => (
             <div className="container">
                 <div className="row">
                     <div className="col-md-7 offset-md-5">
-                        <h1>Innovate Desing in Canada</h1>
+                        <h1>Value Beyond Housing</h1>
                         <p>
-                            Architecture viverra tellus nec massa dictum the euismoe.
-                            <br />
-                            Curabitur viverra the posuere aukue velit.
+                            We are committed team of realtors, concerned about property
+                            development and client investing. Our drive is to deliver 21st
+                            century and eco-friendly homes to inhabitants of Abuja and
+                            Nigeria
                         </p>
                         <div className="butn-light mt-30 mb-30">
                             <a href="/properties">
