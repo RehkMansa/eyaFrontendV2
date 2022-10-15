@@ -45,40 +45,33 @@ const questionsLeft = [
 ];
 const questionsRight = [
     {
-        idx: 3,
+        idx: 1,
         question: "Just some question 2",
         answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, velit.",
     },
     {
-        idx: 4,
+        idx: 2,
         question: "Just some question 2",
         answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, velit.",
     },
 ];
 
 const FAQ = () => {
-    const [selection, setSelection] = useState({
-        tab: "right",
-        index: -1,
-    });
+    const [firstTab, setFirstTab] = useState<number>(-1);
+    const [secondTab, setSecondTab] = useState<number>(-1);
+    /* 
+        onclick
+        
+    
+    */
 
-    const handleToggle = (idx: number, selected: string) => {
-        if (selection.index === idx) {
-            setSelection({
-                ...selection,
-                index: -1,
-            });
+    const handleToggle = (idx: number, state: number): number => {
+        if (state !== idx) {
+            return idx;
         }
-        if (selection.index !== idx) {
-            setSelection({
-                tab: selected,
-                index: idx,
-            });
-        }
+
+        return idx;
     };
-
-    const isSelected = (choice: string, idx: number): boolean =>
-        selection.tab === choice && selection.index === idx;
 
     return (
         <section className="section-padding2">
@@ -93,10 +86,12 @@ const FAQ = () => {
                         <ul className="accordion-box clearfix">
                             {questionsLeft.map(q => (
                                 <Card
-                                    open={isSelected("right", q.idx)}
+                                    open={q.idx === firstTab}
                                     key={q.idx}
                                     {...q}
-                                    toggleSection={() => handleToggle(q.idx, "right")}
+                                    toggleSection={() =>
+                                        setFirstTab(handleToggle(q.idx, firstTab))
+                                    }
                                 />
                             ))}
                         </ul>
@@ -105,10 +100,12 @@ const FAQ = () => {
                         <ul className="accordion-box clearfix">
                             {questionsRight.map(q => (
                                 <Card
-                                    open={isSelected("left", q.idx)}
+                                    open={q.idx === secondTab}
                                     key={q.idx}
                                     {...q}
-                                    toggleSection={() => handleToggle(q.idx, "left")}
+                                    toggleSection={() =>
+                                        setSecondTab(handleToggle(q.idx, secondTab))
+                                    }
                                 />
                             ))}
                         </ul>
