@@ -12,19 +12,15 @@ const AboutSection = () => (
                         About <span>MyEyaEstate</span>
                     </h2>
                     <p>
-                        Architecture viverra tristique justo duis vitae diam neque nivamus
-                        aestan ateuene artines aringianu atelit finibus viverra nec lacus.
-                        Nedana theme erodino setlie suscipe no curabit tristique.
+                        Sticking our minds to futurism we have strategically acquired most
+                        of our estate lands to conform with the expansion and expectation
+                        of all Modern Cities by siting our estates in the most developing
+                        areas of the mega city of Abuja.
                     </p>
                     <p>
-                        Design inilla duiman at elit finibus viverra nec a lacus themo the
-                        drudea seneoice misuscipit non sagie the fermen.
-                    </p>
-                    <p>
-                        Planner inilla duiman at elit finibus viverra nec a lacus themo
-                        the drudea seneoice misuscipit non sagie the fermen. Viverra
-                        tristique jusio the ivite dianne onen nivami acsestion augue
-                        artine.
+                        Our growth rate is over 220% according to the analysis of
+                        Professional Auditors who vetted the performance of the company in
+                        June 2022; Implying that our upward progression is second to none.
                     </p>
                 </div>
                 <div className="col-md-6 animate-box" data-animate-effect="fadeInUp">
