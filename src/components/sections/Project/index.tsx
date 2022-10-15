@@ -37,7 +37,7 @@ const ProjectSlide = ({ title, desc, img }: Props) => (
     </div>
 );
 
-const options = [
+const propertiesOptions = [
     {
         idx: 0,
         title: "SEMI FINISHED BUNGALOW",
@@ -78,7 +78,7 @@ const ProjectSection = () => (
                 <div className="col-md-12">
                     <div className="owl-carousel owl-theme">
                         <SwiperSection slidesPerView={2}>
-                            {options.map(item => (
+                            {propertiesOptions.map(item => (
                                 <SwiperSlide key={item.idx}>
                                     <ProjectSlide {...item} />
                                 </SwiperSlide>

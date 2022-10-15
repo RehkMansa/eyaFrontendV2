@@ -2,6 +2,7 @@ import { useRoutes } from "react-router-dom";
 import MainLayout from "../components/layouts/MainLayout";
 import AboutPage from "../pages/aboutpage";
 import Homepage from "../pages/homepage";
+import Properties from "../pages/properties";
 
 const AllRoutes = () => {
     const routes = useRoutes([
@@ -24,7 +25,7 @@ const AllRoutes = () => {
                 },
                 {
                     path: "properties",
-                    element: <Homepage />,
+                    element: <Properties />,
                 },
             ],
         },
