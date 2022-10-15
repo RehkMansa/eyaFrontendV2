@@ -11,15 +11,15 @@ const Wrapper = styled.main`
     }
 `;
 
-type Props = { slidesPerView: number; children: ReactNode };
+type Props = { slidesPerView: number; children: ReactNode; mobileSlides?: number };
 
-const SwiperSection = ({ slidesPerView: slides, children }: Props) => (
+const SwiperSection = ({ slidesPerView: slides, children, mobileSlides }: Props) => (
     <Wrapper>
         <Swiper
             modules={[Pagination, A11y]}
             spaceBetween={50}
-            slidesPerView={1}
-            slidesPerGroup={1}
+            slidesPerView={mobileSlides || 1}
+            slidesPerGroup={mobileSlides || 1}
             pagination={{ clickable: true }}
             breakpoints={{
                 576: {
@@ -32,5 +32,7 @@ const SwiperSection = ({ slidesPerView: slides, children }: Props) => (
         </Swiper>
     </Wrapper>
 );
+
+SwiperSection.defaultProps = { mobileSlides: null };
 
 export default SwiperSection;

@@ -1,6 +1,7 @@
 import { SwiperSlide } from "swiper/react";
 import SwiperSection from "../../../blocks/SwiperSection";
 import Quote from "../../../../assets/img/quot.png";
+import BgImage from "../../../../assets/img/banner2.jpg";
 
 type Props = { testimonial: string; name: string; desc: string };
 
@@ -49,41 +50,12 @@ const Testimonials = () => (
             className="background bg-img bg-fixed section-padding pb-0"
             data-background="img/banner2.jpg"
             data-overlay-dark="3"
+            style={{ backgroundImage: `url(${BgImage})` }}
         >
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <div className="vid-area">
-                            <div className="vid-icon">
-                                <span className="play-button vid">
-                                    <svg className="circle-fill">
-                                        <circle
-                                            cx="43"
-                                            cy="43"
-                                            r="39"
-                                            stroke="#fff"
-                                            strokeWidth=".5"
-                                        />
-                                    </svg>
-                                    <svg className="circle-track">
-                                        <circle
-                                            cx="43"
-                                            cy="43"
-                                            r="39"
-                                            stroke="none"
-                                            strokeWidth="1"
-                                            fill="none"
-                                        />
-                                    </svg>
-                                    <span className="polygon">
-                                        <i className="ti-control-play" />
-                                    </span>
-                                </span>
-                            </div>
-                            <div className="cont mt-15 mb-30">
-                                <h5>View promo video</h5>
-                            </div>
-                        </div>
+                        <div className="vid-area" />
                     </div>
                     <div className="col-md-5 offset-md-1">
                         <div
