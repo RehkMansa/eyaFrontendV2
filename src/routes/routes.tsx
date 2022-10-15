@@ -6,10 +6,19 @@ const AllRoutes = () => {
     const routes = useRoutes([
         {
             path: "/",
-            element: <MainLayout />,
+            element: <MainLayout isHomePage />,
             children: [
                 {
+                    element: <Homepage />,
                     index: true,
+                },
+            ],
+        },
+        {
+            element: <MainLayout isHomePage={false} />,
+            children: [
+                {
+                    path: "about-us",
                     element: <Homepage />,
                 },
             ],

@@ -1,10 +1,21 @@
 import { Outlet } from "react-router-dom";
 import Header from "../../blocks/Header";
+import BannerHeader from "../HeroSection/Banner";
+import HomepageHeader from "../HeroSection/Homepage";
 
-const MainLayout = () => (
+const MainLayout = ({ isHomePage }: { isHomePage: boolean }) => (
     <main>
         <Header />
-        <Outlet />
+        {isHomePage && <HomepageHeader />}
+        <div className="content-wrapper">
+            <section className="content-lines-wrapper">
+                <div className="content-lines-inner">
+                    <div className="content-lines" />
+                </div>
+            </section>
+            {!isHomePage && <BannerHeader />}
+            <Outlet />
+        </div>
     </main>
 );
 export default MainLayout;
