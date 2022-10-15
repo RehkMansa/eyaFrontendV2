@@ -5,6 +5,7 @@ import Homepage from "../pages/homepage";
 const AllRoutes = () => {
     const routes = useRoutes([
         {
+            path: "/",
             element: <MainLayout isHomePage />,
             children: [
                 {
@@ -18,6 +19,10 @@ const AllRoutes = () => {
             children: [
                 {
                     path: "about-us",
+                    element: <Homepage />,
+                },
+                {
+                    path: "properties",
                     element: <Homepage />,
                 },
             ],

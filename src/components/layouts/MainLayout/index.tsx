@@ -1,11 +1,25 @@
 import { Outlet } from "react-router-dom";
+import styled from "styled-components";
 import Footer from "../../blocks/Footer";
 import Header from "../../blocks/Header";
 import BannerHeader from "../HeroSection/Banner";
 import HomepageHeader from "../HeroSection/Homepage";
 
+const Main = styled.main`
+    @media screen and (max-width: 576px) {
+        .section-title {
+            letter-spacing: 5px;
+            text-align: center;
+        }
+
+        .unset-text-align {
+            text-align: unset;
+        }
+    }
+`;
+
 const MainLayout = ({ isHomePage }: { isHomePage: boolean }) => (
-    <main>
+    <Main>
         <Header />
         {isHomePage && <HomepageHeader />}
         <div className="content-wrapper">
@@ -18,6 +32,6 @@ const MainLayout = ({ isHomePage }: { isHomePage: boolean }) => (
             <Outlet />
             <Footer />
         </div>
-    </main>
+    </Main>
 );
 export default MainLayout;

@@ -37,7 +37,7 @@ const Line = styled.div`
 
 const MenuLink = ({ name, to }: { name: string; to: string }) => (
     <li className="nav-item">
-        <NavLink className="nav-link" to={to}>
+        <NavLink end className="nav-link" to={to}>
             {name}
         </NavLink>
     </li>
@@ -69,6 +69,8 @@ const menuItems = [
 const Header = () => {
     const [show, setShow] = useState(false);
 
+    const handleClick = () => setShow(false);
+
     return (
         <section>
             <nav className="navbar navbar-expand-lg">
@@ -98,7 +100,9 @@ const Header = () => {
                 >
                     <ul className="navbar-nav ml-auto">
                         {menuItems.map(item => (
-                            <MenuLink key={item.idx} {...item} />
+                            <div key={item.idx} role="button" onClick={handleClick}>
+                                <MenuLink {...item} />
+                            </div>
                         ))}
                     </ul>
                 </div>

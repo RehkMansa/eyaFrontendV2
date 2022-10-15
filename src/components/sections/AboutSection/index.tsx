@@ -8,7 +8,7 @@ const AboutSection = () => (
                     className="col-md-6 mb-30 animate-box"
                     data-animate-effect="fadeInUp"
                 >
-                    <h2 className="section-title">
+                    <h2 className="section-title unset-text-align">
                         About <span>MyEyaEstate</span>
                     </h2>
                     <p>
