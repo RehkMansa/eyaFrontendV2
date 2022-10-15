@@ -57,17 +57,28 @@ const questionsRight = [
 ];
 
 const FAQ = () => {
-    const [tabIndex, setTabIndex] = useState<number>(-1);
+    const [selection, setSelection] = useState({
+        tab: "right",
+        index: -1,
+    });
 
-    const handleToggle = (idx: number) => {
-        if (idx === tabIndex) {
-            setTabIndex(-1);
+    const handleToggle = (idx: number, selected: string) => {
+        if (selection.index === idx) {
+            setSelection({
+                ...selection,
+                index: -1,
+            });
         }
-
-        if (idx !== tabIndex) {
-            setTabIndex(idx);
+        if (selection.index !== idx) {
+            setSelection({
+                tab: selected,
+                index: idx,
+            });
         }
     };
+
+    const isSelected = (choice: string, idx: number): boolean =>
+        selection.tab === choice && selection.index === idx;
 
     return (
         <section className="section-padding2">
@@ -80,24 +91,24 @@ const FAQ = () => {
                     </div>
                     <div className="col-md-6">
                         <ul className="accordion-box clearfix">
-                            {questionsLeft.map(question => (
+                            {questionsLeft.map(q => (
                                 <Card
-                                    open={tabIndex === question.idx}
-                                    key={question.idx}
-                                    {...question}
-                                    toggleSection={() => handleToggle(question.idx)}
+                                    open={isSelected("right", q.idx)}
+                                    key={q.idx}
+                                    {...q}
+                                    toggleSection={() => handleToggle(q.idx, "right")}
                                 />
                             ))}
                         </ul>
                     </div>
                     <div className="col-md-6">
                         <ul className="accordion-box clearfix">
-                            {questionsRight.map(question => (
+                            {questionsRight.map(q => (
                                 <Card
-                                    open={tabIndex === question.idx}
-                                    key={question.idx}
-                                    {...question}
-                                    toggleSection={() => handleToggle(question.idx)}
+                                    open={isSelected("left", q.idx)}
+                                    key={q.idx}
+                                    {...q}
+                                    toggleSection={() => handleToggle(q.idx, "left")}
                                 />
                             ))}
                         </ul>
