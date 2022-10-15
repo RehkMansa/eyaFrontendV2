@@ -89,7 +89,7 @@ const ContactUs = () => {
                                         id="message"
                                         cols={30}
                                         rows={4}
-                                        placeholder="Message *"
+                                        placeholder="Message"
                                         required
                                     />
                                 </div>
