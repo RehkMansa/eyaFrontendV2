@@ -1,6 +1,19 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
+// import Logo from "../../../assets/img/logo.png";
+
+const LogoWrapper = styled.div`
+    &.logo h2 {
+        letter-spacing: 0px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .logo-img {
+            display: none;
+        }
+    }
+`;
 
 const Button = styled.button`
     display: flex;
@@ -60,14 +73,14 @@ const Header = () => {
         <section>
             <nav className="navbar navbar-expand-lg">
                 <div className="logo-wrapper valign">
-                    <div className="logo">
-                        <a href="index.html">
-                            {/* <img src="img/logo.png" className="logo-img" alt="" /> */}
+                    <LogoWrapper className="logo">
+                        <img src="/logo.svg" className="logo-img" alt="my eya homes" />
+                        <Link to="/">
                             <h2>
-                                MyEya<span>Estate</span>
+                                My Eya <span>Homes</span>
                             </h2>
-                        </a>
-                    </div>
+                        </Link>
+                    </LogoWrapper>
                 </div>
                 <Button
                     onClick={() => setShow(!show)}
