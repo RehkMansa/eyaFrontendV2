@@ -1,5 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import MainLayout from "../components/layouts/MainLayout";
+import AboutPage from "../pages/aboutpage";
 import Homepage from "../pages/homepage";
 
 const AllRoutes = () => {
@@ -19,7 +20,7 @@ const AllRoutes = () => {
             children: [
                 {
                     path: "about-us",
-                    element: <Homepage />,
+                    element: <AboutPage />,
                 },
                 {
                     path: "properties",

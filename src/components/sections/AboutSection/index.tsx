@@ -12,6 +12,11 @@ const AboutSection = () => (
                         About <span>MyEyaEstate</span>
                     </h2>
                     <p>
+                        My Eya Homes majors in Real Estate Development around the Federal
+                        Capital Territory. Our company is so promising that in one year we
+                        brought Five Estates to life
+                    </p>
+                    <p>
                         Sticking our minds to futurism we have strategically acquired most
                         of our estate lands to conform with the expansion and expectation
                         of all Modern Cities by siting our estates in the most developing
