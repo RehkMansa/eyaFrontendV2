@@ -28,7 +28,7 @@ const AboutSection = () => (
                         <div className="img">
                             <img src={AboutImage} className="img-fluid" alt="" />
                         </div>
-                        <div className="about-img-2 about-buro">Canada Office</div>
+                        <div className="about-img-2 about-buro">Eya Homes</div>
                     </div>
                 </div>
             </div>

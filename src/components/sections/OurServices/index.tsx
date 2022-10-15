@@ -1,6 +1,6 @@
 import Icon1 from "../../../assets/img/icons/icon-1.png";
 import Icon2 from "../../../assets/img/icons/icon-2.png";
-import Icon3 from "../../../assets/img/icons/icon-3.png";
+import Icon3 from "../../../assets/img/icons/icon-4.png";
 
 type Props = { title: string; desc: string; img: string; idx: number };
 
@@ -21,20 +21,20 @@ const Card = ({ title, desc, img, idx }: Props) => (
 const options = [
     {
         idx: 1,
-        title: "Just Some Words",
-        desc: " Architecture bibendum eros eget lacus the vulputate sit amet vehicuta nibhen ulicera in the vitae miss.",
+        title: "Estate Management",
+        desc: "With several houses and estate under our care, we offer quality housing deals",
         img: Icon1,
     },
     {
         idx: 2,
-        title: "Just Some Words",
-        desc: " Architecture bibendum eros eget lacus the vulputate sit amet vehicuta nibhen ulicera in the vitae miss.",
+        title: "Real Estate",
+        desc: "From land acquisition to home sales and rent, we are more than available to meet your needs",
         img: Icon2,
     },
     {
         idx: 3,
-        title: "Just Some Words",
-        desc: " Architecture bibendum eros eget lacus the vulputate sit amet vehicuta nibhen ulicera in the vitae miss.",
+        title: "Partnership",
+        desc: "Let us add value to your money as we help you pick up the right real estate investments opportunities",
         img: Icon3,
     },
 ];
