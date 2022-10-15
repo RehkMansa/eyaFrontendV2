@@ -1,4 +1,3 @@
-import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import CarouselSection from "../../blocks/CarouselSection";
 import Slider1 from "../../../assets/img/slider/1.jpg";
@@ -82,22 +81,19 @@ const socialIcons = [
 ];
 
 const HomepageHeader = () => (
-    <>
-        <header className="header slider-fade">
-            <Wrapper>
-                <CarouselSection imageArr={carouselItems} />
-            </Wrapper>
-            <div className="left-panel">
-                <ul className="social-left clearfix">
-                    {socialIcons.map(item => (
-                        <li key={item.idx}>
-                            <span />
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </header>
-        <Outlet />
-    </>
+    <header className="header slider-fade">
+        <Wrapper>
+            <CarouselSection imageArr={carouselItems} />
+        </Wrapper>
+        <div className="left-panel">
+            <ul className="social-left clearfix">
+                {socialIcons.map(item => (
+                    <li key={item.idx}>
+                        <span />
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </header>
 );
 export default HomepageHeader;
