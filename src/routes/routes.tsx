@@ -27,6 +27,10 @@ const AllRoutes = () => {
                     path: "properties",
                     element: <Properties />,
                 },
+                {
+                    path: "properties:id",
+                    element: <Properties />,
+                },
             ],
         },
     ]);

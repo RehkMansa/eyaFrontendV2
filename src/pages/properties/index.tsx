@@ -17,7 +17,7 @@ const Image = styled.img`
     }
 `;
 
-const options = [
+export const propertiesArray = [
     {
         idx: 1,
         title: "SEMI FINISHED BUNGALOW",
@@ -82,7 +82,7 @@ const Properties = () => (
             </div>
             <div className="row">
                 <div className="col-md-12">
-                    {options.map(prop => (
+                    {propertiesArray.map(prop => (
                         <Card key={prop.idx} {...prop} />
                     ))}
                 </div>
