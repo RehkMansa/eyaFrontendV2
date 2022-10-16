@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { SwiperSlide } from "swiper/react";
 import Property1 from "../../../assets/img/projects/1.jpg";
@@ -24,15 +25,15 @@ const ProjectSlide = ({ title, desc, img }: Props) => (
         </div>
         <div className="con">
             <h6>
-                <a href="cotton-house.html">{title}</a>
+                <Link to="/properties">{title}</Link>
             </h6>
             <h5>
-                <a href="cotton-house.html">{desc}</a>
+                <Link to="/properties">{desc}</Link>
             </h5>
             <div className="line" />
-            <a href="cotton-house.html">
+            <Link to="/properties">
                 <i className="ti-arrow-right" />
-            </a>
+            </Link>
         </div>
     </div>
 );
