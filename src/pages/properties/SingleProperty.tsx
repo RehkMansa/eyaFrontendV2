@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { validateAll } from "indicative/validator";
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { propertiesArray } from ".";
+import { Input, TextArea } from "../../components/elements/Inputs";
 
 const RowWrap = styled.div`
     @media screen and (max-width: 576px) {
@@ -44,40 +46,43 @@ type CommentProps = {
         message: string;
     };
     onChange: (e: React.ChangeEvent<any>) => void;
+    error: { [x: string]: string };
 };
 
-const CommentSection = ({ handleSubmit, state, onChange }: CommentProps) => (
+const CommentSection = ({ handleSubmit, state, onChange, error }: CommentProps) => (
     <div className="eyahomes-comment-section">
         <div className="row">
             <div className="col-12">
                 <h3>Leave a Reply</h3>
                 <form onSubmit={handleSubmit} className="row">
                     <div className="col-md-6">
-                        <input
+                        <Input
                             type="text"
                             name="fullName"
+                            onChange={onChange}
                             value={state.fullName}
                             placeholder="Full Name *"
+                            error={error.fullName}
                         />
                     </div>
                     <div className="col-md-6">
-                        <input
+                        <Input
                             type="email"
                             name="email"
                             value={state.email}
                             placeholder="Email Address *"
                             onChange={onChange}
+                            error={error.email}
                         />
                     </div>
                     <div className="col-md-12">
-                        <textarea
+                        <TextArea
                             name="message"
-                            id="message"
-                            cols={40}
                             value={state.message}
-                            rows={4}
                             placeholder="Your Comment *"
                             onChange={onChange}
+                            error={error.message}
+                            type=""
                         />
                     </div>
                     <div className="col-md-12 mt-3">
@@ -96,10 +101,10 @@ const SingleProperty = () => {
         email: "",
         message: "",
     });
+    const [error, setError] = useState<{ [x: string]: string }>({});
 
     const handleChange = (e: React.ChangeEvent<any>) => {
         const { name, value } = e.target;
-
         setFormData({
             ...formData,
             [name]: value,
@@ -109,7 +114,33 @@ const SingleProperty = () => {
     const handleSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault();
 
-        console.log(formData);
+        const rules = {
+            fullName: "required|min:3",
+            email: "required|email",
+            message: "required|min:10",
+        };
+        const message = {
+            "fullName.required": "Please enter your name",
+            "fullName.min": "Name is too short",
+            "email.required": "Please enter your email address",
+            "email.email": "Email is not of a valid format",
+            "message.required": "Please enter a short message",
+            "message.min": "Message should be above 5 letters",
+        };
+
+        validateAll(formData, rules, message)
+            .then(() => {
+                console.log(formData);
+            })
+            .catch(errors => {
+                const formattedErr: { [x: string]: string } = {};
+
+                errors.forEach((err: any) => {
+                    formattedErr[err.field] = err.message;
+                });
+
+                setError(formattedErr);
+            });
     };
 
     const currentProperty = propertiesArray.find(
@@ -168,6 +199,7 @@ const SingleProperty = () => {
                     onChange={handleChange}
                     handleSubmit={handleSubmit}
                     state={formData}
+                    error={error}
                 />
             </div>
         </section>
