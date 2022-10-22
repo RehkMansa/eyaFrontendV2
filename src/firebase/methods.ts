@@ -5,7 +5,7 @@ import { db } from "./config";
 
 const colRef = (name: string) => collection(db, name);
 
-const commentRef = colRef(COMMENTS);
+export const commentRef = colRef(COMMENTS);
 
 const trimMessage = (err: any): string => err.message.replace("Firebase: ", "");
 
