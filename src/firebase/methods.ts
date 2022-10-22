@@ -10,7 +10,8 @@ export const propertiesRef = colRef(PROPERTIES);
 
 const trimMessage = (err: any): string => err.message.replace("Firebase: ", "");
 
-export const orderQuery = query(commentRef, orderBy("createdAt"));
+export const orderedComment = query(commentRef, orderBy("createdAt"));
+export const orderedProperties = query(propertiesRef, orderBy("createdAt"));
 
 export const addDocument = (name: string, payload: { [x: string]: any }) => {
     const ref = colRef(name);
