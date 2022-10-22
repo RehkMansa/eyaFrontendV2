@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { addDoc, collection, orderBy, query, serverTimestamp } from "firebase/firestore";
-import { COMMENTS } from "../constants";
+import { COMMENTS, PROPERTIES } from "../constants";
 import { db } from "./config";
 
 const colRef = (name: string) => collection(db, name);
 
 export const commentRef = colRef(COMMENTS);
+export const propertiesRef = colRef(PROPERTIES);
 
 const trimMessage = (err: any): string => err.message.replace("Firebase: ", "");
 

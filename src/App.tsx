@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import GlobalStyles from "./assets/styles/global.";
 import CommentsContext from "./context/CommentsContext";
 import PropertiesContext from "./context/PropertiesContext";
-import { commentRef } from "./firebase/methods";
+import { commentRef, propertiesRef } from "./firebase/methods";
 import AllRoutes from "./routes/routes";
 
 const App = () => {
@@ -17,18 +17,18 @@ const App = () => {
                 id: doc.id,
                 ...doc.data(),
             }));
-
+            console.log(newArr);
             setComments(newArr);
         });
     }, []);
 
     useEffect(() => {
-        onSnapshot(commentRef, snap => {
+        onSnapshot(propertiesRef, snap => {
             const newArr = snap.docs.map(doc => ({
                 id: doc.id,
                 ...doc.data(),
             }));
-
+            console.log(newArr);
             setProperties(newArr);
         });
     }, []);
