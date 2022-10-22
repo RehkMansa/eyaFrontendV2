@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { propertiesArray } from ".";
@@ -34,8 +36,81 @@ const Row = ({ title, value }: { title: string; value: string }) => (
     </RowWrap>
 );
 
+type CommentProps = {
+    handleSubmit: (e: React.SyntheticEvent) => void;
+    state: {
+        fullName: string;
+        email: string;
+        message: string;
+    };
+    onChange: (e: React.ChangeEvent<any>) => void;
+};
+
+const CommentSection = ({ handleSubmit, state, onChange }: CommentProps) => (
+    <div className="eyahomes-comment-section">
+        <div className="row">
+            <div className="col-12">
+                <h3>Leave a Reply</h3>
+                <form onSubmit={handleSubmit} className="row">
+                    <div className="col-md-6">
+                        <input
+                            type="text"
+                            name="fullName"
+                            value={state.fullName}
+                            placeholder="Full Name *"
+                        />
+                    </div>
+                    <div className="col-md-6">
+                        <input
+                            type="email"
+                            name="email"
+                            value={state.email}
+                            placeholder="Email Address *"
+                            onChange={onChange}
+                        />
+                    </div>
+                    <div className="col-md-12">
+                        <textarea
+                            name="message"
+                            id="message"
+                            cols={40}
+                            value={state.message}
+                            rows={4}
+                            placeholder="Your Comment *"
+                            onChange={onChange}
+                        />
+                    </div>
+                    <div className="col-md-12 mt-3">
+                        <input type="submit" name="submit" value="Leave a reply" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+);
+
 const SingleProperty = () => {
     const { id } = useParams();
+    const [formData, setFormData] = useState({
+        fullName: "",
+        email: "",
+        message: "",
+    });
+
+    const handleChange = (e: React.ChangeEvent<any>) => {
+        const { name, value } = e.target;
+
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = (e: React.SyntheticEvent) => {
+        e.preventDefault();
+
+        console.log(formData);
+    };
 
     const currentProperty = propertiesArray.find(
         property => property.idx.toString() === id
@@ -89,6 +164,11 @@ const SingleProperty = () => {
                         </ul>
                     </div>
                 </div>
+                <CommentSection
+                    onChange={handleChange}
+                    handleSubmit={handleSubmit}
+                    state={formData}
+                />
             </div>
         </section>
     );

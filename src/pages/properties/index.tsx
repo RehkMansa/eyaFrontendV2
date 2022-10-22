@@ -64,7 +64,7 @@ const Card = ({ img, meta, title, price, idx }: Props) => (
             <p>{price}</p>
             <div className="butn-dark mt-15">
                 <Link to={`/properties/${idx}`}>
-                    <span>Discover</span>
+                    <span>View</span>
                 </Link>
             </div>
         </div>
