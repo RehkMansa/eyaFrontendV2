@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export const useSnapshot = (ref: Query<DocumentData>) => {
     const [value, setValue] = useState<{}[]>([]);
-    console.log("rendered");
+
     useEffect(() => {
         onSnapshot(ref, snap => {
             const newArr = snap.docs.map(doc => ({
@@ -11,6 +11,7 @@ export const useSnapshot = (ref: Query<DocumentData>) => {
                 ...doc.data(),
             }));
             setValue(newArr);
+            console.log(newArr);
         });
     }, [ref]);
 
