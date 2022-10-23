@@ -37,7 +37,7 @@ const App = () => {
         console.log("rendered");
     }, []);
 
-    if (properties.length > 1) {
+    if (properties.length < 1) {
         return <PreLoader />;
     }
 
