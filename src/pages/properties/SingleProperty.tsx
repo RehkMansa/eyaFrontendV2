@@ -3,6 +3,8 @@ import { validateAll } from "indicative/validator";
 import React, { useContext, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import { MdClose } from "react-icons/md";
+import { BiCheckDouble } from "react-icons/bi";
 import { Input, TextArea } from "../../components/elements/Inputs";
 import { addDocument } from "../../firebase/methods";
 import { CommentType } from "../../types/comments.type";
@@ -12,7 +14,7 @@ import PreLoader, { FullPageSpinner } from "../../components/elements/PreLoader"
 
 const RowWrap = styled.div`
     @media screen and (max-width: 576px) {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 `;
 
@@ -36,11 +38,38 @@ const Img = styled.img`
 `;
 
 const NotificationWrapper = styled.div`
+    position: relative;
+
+    .close-icon {
+        position: absolute;
+        top: 5px;
+        font-size: 18px;
+        right: 25px;
+        cursor: pointer;
+    }
+
     p {
         text-transform: lowercase;
+        margin-bottom: 0;
     }
     p:first-letter {
         text-transform: capitalize;
+    }
+`;
+
+const FeaturesLi = styled.li`
+    .page-list-icon span {
+        border: none;
+        padding: 0;
+    }
+    span svg {
+        font-size: 22px;
+    }
+`;
+
+const Blockquote = styled.blockquote`
+    &:before {
+        display: none;
     }
 `;
 
@@ -201,13 +230,16 @@ const SingleProperty = () => {
                             <div className="col-md-7 offset-md-5">
                                 <div className="project-bar">
                                     <div className="row justify-content-between align-items-center text-left text-lg-start">
-                                        <Row title="Type of property" value="Land" />
+                                        <Row title="Realtor" value="Eya homes" />
                                         <Row
-                                            title="Property details"
-                                            value="12 hectares"
+                                            title="Price"
+                                            value={`₦ ${currentProperty?.price}`}
                                         />
                                         <Row title="Category" value="Rent" />
-                                        <Row title="Location" value="Abuja" />
+                                        <Row
+                                            title="Location"
+                                            value={currentProperty?.location}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -219,17 +251,25 @@ const SingleProperty = () => {
                         <ProductName className="mt-30 section-title2">
                             {currentProperty?.title.toLowerCase()}
                         </ProductName>
-                        <p className="mb-30">{currentProperty?.price}</p>
-                        {/* Loop features here */}
+                        <Blockquote>
+                            <h2>Description</h2>
+                            {currentProperty?.description}
+                        </Blockquote>
                         <ul className="list-unstyled page-list mb-30">
-                            <li>
-                                <div className="page-list-icon">
-                                    <span className="ti-check" />
-                                </div>
-                                <div className="page-list-text">
-                                    <p>Over 15 years of experience</p>
-                                </div>
-                            </li>
+                            {currentProperty.features.map((item: any) => (
+                                <FeaturesLi key={item.title}>
+                                    <div className="page-list-icon">
+                                        <span className="ti">
+                                            <BiCheckDouble />
+                                        </span>
+                                    </div>
+                                    <div className="page-list-text">
+                                        <p>
+                                            {item.title}: {item.value}
+                                        </p>
+                                    </div>
+                                </FeaturesLi>
+                            ))}
                         </ul>
                     </div>
                 </div>
@@ -241,6 +281,13 @@ const SingleProperty = () => {
                                 role="alert"
                             >
                                 <p>{notification}</p>
+                            </div>
+                            <div
+                                role="button"
+                                onClick={() => setNotification("")}
+                                className="close-icon"
+                            >
+                                <MdClose />
                             </div>
                         </div>
                     </NotificationWrapper>

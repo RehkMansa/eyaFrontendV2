@@ -15,6 +15,19 @@ const Wrapper = styled.div`
         inset: 0;
     }
 
+    .preloader {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 576px) {
+        .preloader {
+            width: 50%;
+        }
+    }
+
     .opacity-50 {
         background-color: rgba(39, 39, 39, 0.6);
     }
@@ -33,7 +46,7 @@ const PreLoader = () => (
     <Wrapper>
         <div className="overlay" />
         <div className="preloader">
-            <BarLoader color="#B19777" width="30%" height={1.5} />
+            <BarLoader color="#B19777" width="70%" height={1.5} />
         </div>
     </Wrapper>
 );
