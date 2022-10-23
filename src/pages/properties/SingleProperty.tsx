@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { validateAll } from "indicative/validator";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import { propertiesArray } from ".";
 import { Input, TextArea } from "../../components/elements/Inputs";
 import { addDocument } from "../../firebase/methods";
 import { CommentType } from "../../types/comments.type";
 import { COMMENTS } from "../../constants";
+import AppContext from "../../context/AppContext";
 
 const RowWrap = styled.div`
     @media screen and (max-width: 576px) {
@@ -99,6 +99,7 @@ const CommentSection = ({ handleSubmit, state, onChange, error }: CommentProps) 
 
 const SingleProperty = () => {
     const { id } = useParams();
+    const { properties } = useContext(AppContext);
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -161,8 +162,8 @@ const SingleProperty = () => {
             });
     };
 
-    const currentProperty = propertiesArray.find(
-        property => property.idx.toString() === id
+    const currentProperty: any = properties.filter(
+        (property: any) => property.idx.toString() === id
     );
 
     return (
@@ -173,7 +174,7 @@ const SingleProperty = () => {
                         <div className="portfolio-item">
                             <Img
                                 className="img-fluid"
-                                src={currentProperty?.img}
+                                src={currentProperty?.images[0]}
                                 alt=""
                             />
                         </div>

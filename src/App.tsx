@@ -3,6 +3,7 @@ import { getDocs } from "firebase/firestore";
 import { useEffect, useMemo, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import GlobalStyles from "./assets/styles/global.";
+import PreLoader from "./components/elements/PreLoader";
 import AppContext from "./context/AppContext";
 import { orderedComment, orderedProperties } from "./firebase/methods";
 import { useSnapshot } from "./hooks";
@@ -29,13 +30,16 @@ const App = () => {
         } catch (error) {
             console.log(error);
         }
-        console.log(data);
     };
 
     useEffect(() => {
         getProperties();
         console.log("rendered");
     }, []);
+
+    if (properties.length > 1) {
+        return <PreLoader />;
+    }
 
     return (
         <BrowserRouter>
