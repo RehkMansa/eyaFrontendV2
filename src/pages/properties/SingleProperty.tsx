@@ -213,8 +213,15 @@ const SingleProperty = () => {
                     </div>
                 </div>
                 {notification && (
-                    <div>
-                        <p>{notification}</p>
+                    <div className="row">
+                        <div className="col-12">
+                            <div
+                                className="alert alert-success contact__msg"
+                                role="alert"
+                            >
+                                {notification}
+                            </div>
+                        </div>
                     </div>
                 )}
                 <CommentSection
