@@ -5,6 +5,9 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { propertiesArray } from ".";
 import { Input, TextArea } from "../../components/elements/Inputs";
+import { addDocument } from "../../firebase/methods";
+import { CommentType } from "../../types/comments.type";
+import { COMMENTS } from "../../constants";
 
 const RowWrap = styled.div`
     @media screen and (max-width: 576px) {
@@ -102,6 +105,7 @@ const SingleProperty = () => {
         message: "",
     });
     const [error, setError] = useState<{ [x: string]: string }>({});
+    const [notification, setNotification] = useState("rehkmansa");
 
     const handleChange = (e: React.ChangeEvent<any>) => {
         const { name, value } = e.target;
@@ -109,6 +113,19 @@ const SingleProperty = () => {
             ...formData,
             [name]: value,
         });
+    };
+
+    const uploadComment = async () => {
+        const payload: CommentType = {
+            ...formData,
+            approved: false,
+        };
+        try {
+            await addDocument(COMMENTS, payload);
+            setNotification("Your comment is pending approval");
+        } catch (err) {
+            setNotification(err as string);
+        }
     };
 
     const handleSubmit = (e: React.SyntheticEvent) => {
@@ -130,7 +147,7 @@ const SingleProperty = () => {
 
         validateAll(formData, rules, message)
             .then(() => {
-                console.log(formData);
+                uploadComment();
             })
             .catch(errors => {
                 const formattedErr: { [x: string]: string } = {};
@@ -195,6 +212,11 @@ const SingleProperty = () => {
                         </ul>
                     </div>
                 </div>
+                {notification && (
+                    <div>
+                        <p>{notification}</p>
+                    </div>
+                )}
                 <CommentSection
                     onChange={handleChange}
                     handleSubmit={handleSubmit}

@@ -70,7 +70,7 @@ const Footer = () => (
                     </div> */}
                     <div className="col-md-6">
                         <p className="right sm-text-center">
-                            <a target="_blank" href="https://swizel.con" rel="noreferrer">
+                            <a target="_blank" href="https://swizel.co" rel="noreferrer">
                                 Designed by Swizel
                             </a>
                         </p>

@@ -13,7 +13,7 @@ const trimMessage = (err: any): string => err.message.replace("Firebase: ", "");
 export const orderedComment = query(commentRef, orderBy("createdAt"));
 export const orderedProperties = query(propertiesRef, orderBy("createdAt"));
 
-export const addDocument = (name: string, payload: { [x: string]: any }) => {
+export const addDocument = async (name: string, payload: { [x: string]: any }) => {
     const ref = colRef(name);
 
     try {
@@ -22,7 +22,7 @@ export const addDocument = (name: string, payload: { [x: string]: any }) => {
             createdAt: serverTimestamp(),
         };
 
-        addDoc(ref, data);
+        await addDoc(ref, data);
     } catch (err: any) {
         const error = trimMessage(err);
         throw new Error(error);
