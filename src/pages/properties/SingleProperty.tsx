@@ -119,6 +119,7 @@ const SingleProperty = () => {
         const payload: CommentType = {
             ...formData,
             approved: false,
+            propertyId: id as string,
         };
         try {
             await addDocument(COMMENTS, payload);

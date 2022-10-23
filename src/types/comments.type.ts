@@ -3,4 +3,5 @@ export type CommentType = {
     email: string;
     message: string;
     approved: boolean;
+    propertyId: string;
 };
