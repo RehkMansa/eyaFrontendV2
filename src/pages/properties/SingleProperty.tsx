@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { validateAll } from "indicative/validator";
-import React, { useContext, useState } from "react";
+import React, { useContext, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { Input, TextArea } from "../../components/elements/Inputs";
@@ -8,6 +8,7 @@ import { addDocument } from "../../firebase/methods";
 import { CommentType } from "../../types/comments.type";
 import { COMMENTS } from "../../constants";
 import AppContext from "../../context/AppContext";
+import PreLoader, { FullPageSpinner } from "../../components/elements/PreLoader";
 
 const RowWrap = styled.div`
     @media screen and (max-width: 576px) {
@@ -31,6 +32,15 @@ const Img = styled.img`
 
     @media screen and (max-width: 576px) {
         height: 300px;
+    }
+`;
+
+const NotificationWrapper = styled.div`
+    p {
+        text-transform: lowercase;
+    }
+    p:first-letter {
+        text-transform: capitalize;
     }
 `;
 
@@ -106,7 +116,8 @@ const SingleProperty = () => {
         message: "",
     });
     const [error, setError] = useState<{ [x: string]: string }>({});
-    const [notification, setNotification] = useState("rehkmansa");
+    const [notification, setNotification] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<any>) => {
         const { name, value } = e.target;
@@ -117,6 +128,7 @@ const SingleProperty = () => {
     };
 
     const uploadComment = async () => {
+        setLoading(true);
         const payload: CommentType = {
             ...formData,
             approved: false,
@@ -128,6 +140,7 @@ const SingleProperty = () => {
         } catch (err) {
             setNotification(err as string);
         }
+        setLoading(false);
     };
 
     const handleSubmit = (e: React.SyntheticEvent) => {
@@ -150,6 +163,7 @@ const SingleProperty = () => {
         validateAll(formData, rules, message)
             .then(() => {
                 uploadComment();
+                setError({});
             })
             .catch(errors => {
                 const formattedErr: { [x: string]: string } = {};
@@ -162,9 +176,14 @@ const SingleProperty = () => {
             });
     };
 
-    const currentProperty: any = properties.filter(
-        (property: any) => property.idx.toString() === id
+    const currentProperty: any = useMemo(
+        () => properties.find((property: any) => property.id.toString() === id),
+        [properties, id]
     );
+
+    if (!currentProperty) {
+        return <PreLoader />;
+    }
 
     return (
         <section className="project-page section-padding2">
@@ -174,7 +193,7 @@ const SingleProperty = () => {
                         <div className="portfolio-item">
                             <Img
                                 className="img-fluid"
-                                src={currentProperty?.images[0]}
+                                src={currentProperty.images[0]}
                                 alt=""
                             />
                         </div>
@@ -215,16 +234,16 @@ const SingleProperty = () => {
                     </div>
                 </div>
                 {notification && (
-                    <div className="row">
-                        <div className="col-12">
+                    <NotificationWrapper className="row">
+                        <div className="col-md-6">
                             <div
                                 className="alert alert-success contact__msg"
                                 role="alert"
                             >
-                                {notification}
+                                <p>{notification}</p>
                             </div>
                         </div>
-                    </div>
+                    </NotificationWrapper>
                 )}
                 <CommentSection
                     onChange={handleChange}
@@ -233,6 +252,7 @@ const SingleProperty = () => {
                     error={error}
                 />
             </div>
+            {loading && <FullPageSpinner />}
         </section>
     );
 };

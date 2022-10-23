@@ -1,9 +1,10 @@
-import { BarLoader } from "react-spinners";
+import { BarLoader, MoonLoader } from "react-spinners";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
     position: fixed;
     inset: 0;
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,12 +14,27 @@ const Wrapper = styled.div`
         background-color: rgba(39, 39, 39, 01);
         inset: 0;
     }
+
+    .opacity-50 {
+        background-color: rgba(39, 39, 39, 0.6);
+    }
 `;
+
+export const FullPageSpinner = () => (
+    <Wrapper>
+        <div className="overlay opacity-50" />
+        <div className="preloader">
+            <MoonLoader color="#B19777" />
+        </div>
+    </Wrapper>
+);
 
 const PreLoader = () => (
     <Wrapper>
         <div className="overlay" />
-        <BarLoader color="#B19777" width="30%" height={1.5} />
+        <div className="preloader">
+            <BarLoader color="#B19777" width="30%" height={1.5} />
+        </div>
     </Wrapper>
 );
 
