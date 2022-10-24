@@ -160,7 +160,7 @@ const SingleProperty = () => {
         setLoading(true);
         const payload: CommentType = {
             ...formData,
-            approved: false,
+            approved: "pending",
             propertyId: id as string,
         };
         try {
