@@ -12,7 +12,7 @@ import AllRoutes from "./routes/routes";
 const App = () => {
     const [properties, setProperties] = useState<{}[]>([]);
     const comments = useSnapshot(orderedComment);
-    const provider = useMemo(() => comments, [comments]);
+    const provider = useMemo(() => ({ comments, properties }), [comments, properties]);
 
     const getProperties = async () => {
         const data: {}[] = [];
@@ -34,18 +34,14 @@ const App = () => {
 
     useEffect(() => {
         getProperties();
-        console.log("rendered");
+        console.count("rendered");
     }, []);
-
-    if (properties.length < 1) {
-        return <PreLoader />;
-    }
 
     return (
         <BrowserRouter>
             <GlobalStyles />
-            <AppContext.Provider value={{ comments: provider, properties }}>
-                <AllRoutes />
+            <AppContext.Provider value={provider}>
+                {properties.length < 1 ? <PreLoader /> : <AllRoutes />}
             </AppContext.Provider>
         </BrowserRouter>
     );
