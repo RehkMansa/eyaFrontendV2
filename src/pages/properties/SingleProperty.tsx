@@ -11,6 +11,7 @@ import { CommentType } from "../../types/comments.type";
 import { COMMENTS } from "../../constants";
 import AppContext from "../../context/AppContext";
 import PreLoader, { FullPageSpinner } from "../../components/elements/PreLoader";
+import CommentBox from "./CommentBox";
 
 const RowWrap = styled.div`
     @media screen and (max-width: 576px) {
@@ -92,53 +93,49 @@ type CommentProps = {
 };
 
 const CommentSection = ({ handleSubmit, state, onChange, error }: CommentProps) => (
-    <div className="eyahomes-comment-section">
-        <div className="row">
-            <div className="col-12">
-                <h3>Leave a Reply</h3>
-                <form onSubmit={handleSubmit} className="row">
-                    <div className="col-md-6">
-                        <Input
-                            type="text"
-                            name="fullName"
-                            onChange={onChange}
-                            value={state.fullName}
-                            placeholder="Full Name *"
-                            error={error.fullName}
-                        />
-                    </div>
-                    <div className="col-md-6">
-                        <Input
-                            type="email"
-                            name="email"
-                            value={state.email}
-                            placeholder="Email Address *"
-                            onChange={onChange}
-                            error={error.email}
-                        />
-                    </div>
-                    <div className="col-md-12">
-                        <TextArea
-                            name="message"
-                            value={state.message}
-                            placeholder="Your Comment *"
-                            onChange={onChange}
-                            error={error.message}
-                            type=""
-                        />
-                    </div>
-                    <div className="col-md-12 mt-3">
-                        <input type="submit" name="submit" value="Leave a reply" />
-                    </div>
-                </form>
+    <div className="col-12">
+        <h3>Leave a Reply</h3>
+        <form onSubmit={handleSubmit} className="row">
+            <div className="col-md-6">
+                <Input
+                    type="text"
+                    name="fullName"
+                    onChange={onChange}
+                    value={state.fullName}
+                    placeholder="Full Name *"
+                    error={error.fullName}
+                />
             </div>
-        </div>
+            <div className="col-md-6">
+                <Input
+                    type="email"
+                    name="email"
+                    value={state.email}
+                    placeholder="Email Address *"
+                    onChange={onChange}
+                    error={error.email}
+                />
+            </div>
+            <div className="col-md-12">
+                <TextArea
+                    name="message"
+                    value={state.message}
+                    placeholder="Your Comment *"
+                    onChange={onChange}
+                    error={error.message}
+                    type=""
+                />
+            </div>
+            <div className="col-md-12 mt-3">
+                <input type="submit" name="submit" value="Leave a reply" />
+            </div>
+        </form>
     </div>
 );
 
 const SingleProperty = () => {
     const { id } = useParams();
-    const { properties } = useContext(AppContext);
+    const { properties, comments } = useContext(AppContext);
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -292,12 +289,32 @@ const SingleProperty = () => {
                         </div>
                     </NotificationWrapper>
                 )}
-                <CommentSection
-                    onChange={handleChange}
-                    handleSubmit={handleSubmit}
-                    state={formData}
-                    error={error}
-                />
+                <div className="eyahomes-comment-section">
+                    <div className="row">
+                        <div className="col-md-6">
+                            {comments
+                                .filter(
+                                    (comment: any) => comment?.approved === "approved"
+                                )
+                                .map((comment: any) => (
+                                    <CommentBox
+                                        key={comment.fullName + comment.email}
+                                        date={comment.createdAt.toDate().toDateString()}
+                                        fullName={comment.fullName}
+                                        {...comment}
+                                    />
+                                ))}
+                        </div>
+                        <div className="col-md-6">
+                            <CommentSection
+                                onChange={handleChange}
+                                handleSubmit={handleSubmit}
+                                state={formData}
+                                error={error}
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
             {loading && <FullPageSpinner />}
         </section>

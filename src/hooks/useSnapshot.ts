@@ -11,7 +11,7 @@ export const useSnapshot = (ref: Query<DocumentData>) => {
                 ...doc.data(),
             }));
             setValue(newArr);
-            console.log(newArr);
+            console.count("background updates");
         });
     }, [ref]);
 
