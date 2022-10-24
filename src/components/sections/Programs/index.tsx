@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 import { SwiperSlide } from "swiper/react";
 import SwiperSection from "../../blocks/SwiperSection";
 import RewardsImg from "../../../assets/img/eyahomes/8.jpg";
 import HouseDeals from "../../../assets/img/eyahomes/6.jpg";
 import Partnership from "../../../assets/img/eyahomes/7.jpg";
-import styled from "styled-components";
 
 type Props = { name: string; img: string; meta: string };
 
@@ -20,7 +21,9 @@ const SingleProgram = ({ name, img, meta }: Props) => (
             <div className="con">
                 <span className="category">{meta}</span>
                 <h5>
-                    <a href="post.html">{name}</a>
+                    <Link to={`programs/${name.replaceAll(" ", "-").toLowerCase()}`}>
+                        {name}
+                    </Link>
                 </h5>
             </div>
         </div>
@@ -38,7 +41,7 @@ const swiperOptions = [
         idx: 1,
         meta: "Affordable deals on all properties",
         img: HouseDeals,
-        name: "Monthly rewards for agents",
+        name: "Housing promo",
     },
     {
         idx: 2,

@@ -1,5 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import MainLayout from "../components/layouts/MainLayout";
+import ProgramDetail from "../components/sections/Programs/ProgramDetails";
 import AboutPage from "../pages/aboutpage";
 import ContactUs from "../pages/contactUs";
 import Error404 from "../pages/Error404";
@@ -33,6 +34,10 @@ const AllRoutes = () => {
                 {
                     path: "properties/:id",
                     element: <SingleProperty />,
+                },
+                {
+                    path: "programs/:name",
+                    element: <ProgramDetail />,
                 },
                 {
                     path: "contact-us",
