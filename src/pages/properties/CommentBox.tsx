@@ -3,6 +3,8 @@ import styled from "styled-components";
 type Props = { message: string; date: string; fullName: string };
 
 const Wrapper = styled.div`
+    margin-bottom: 30px;
+
     .eyahomes-user-comment {
         margin-right: 15px;
     }
@@ -13,6 +15,12 @@ const Wrapper = styled.div`
 
     p:first-letter {
         text-transform: uppercase;
+    }
+
+    @media screen and (min-width: 100px) {
+        h3 span {
+            margin-left: 15px;
+        }
     }
 `;
 

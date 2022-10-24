@@ -298,10 +298,10 @@ const SingleProperty = () => {
                                 )
                                 .map((comment: any) => (
                                     <CommentBox
-                                        key={comment.fullName + comment.email}
                                         date={comment.createdAt.toDate().toDateString()}
                                         fullName={comment.fullName}
                                         {...comment}
+                                        key={comment.fullName + comment.email}
                                     />
                                 ))}
                         </div>
