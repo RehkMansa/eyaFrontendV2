@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { ImFacebook, ImWhatsapp } from "react-icons/im";
+import { BsInstagram } from "react-icons/bs";
 import CarouselSection from "../../blocks/CarouselSection";
 import Slider1 from "../../../assets/img/slider/1.jpg";
 import Slider2 from "../../../assets/img/slider/2.jpg";
@@ -39,7 +41,7 @@ const CarouselItem = () => (
                     <div className="col-md-7 offset-md-5">
                         <h1>Value Beyond Housing</h1>
                         <p>
-                            We are committed team of realtors, concerned about property
+                            We are a committed team of realtors, concerned about property
                             development and client investing. Our drive is to deliver 21st
                             century and eco-friendly homes to inhabitants of Abuja and
                             Nigeria
@@ -72,12 +74,18 @@ const carouselItems = [
 const socialIcons = [
     {
         idx: 0,
+        link: "https://www.facebook.com/myeyahomes/",
+        icon: <ImFacebook />,
     },
     {
         idx: 1,
+        icon: <BsInstagram />,
+        link: "https://instagram.com/myeyahomes?igshid=YmMyMTA2M2Y=",
     },
     {
         idx: 2,
+        icon: <ImWhatsapp />,
+        link: "#",
     },
 ];
 
@@ -90,7 +98,9 @@ const HomepageHeader = () => (
             <ul className="social-left clearfix">
                 {socialIcons.map(item => (
                     <li key={item.idx}>
-                        <span />
+                        <a href={item.link} target="_blank" rel="noreferrer">
+                            <span>{item.icon}</span>
+                        </a>
                     </li>
                 ))}
             </ul>
