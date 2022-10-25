@@ -1,10 +1,22 @@
 import styled from "styled-components";
+import { TfiControlPlay } from "react-icons/tfi";
 import { SwiperSlide } from "swiper/react";
 import SwiperSection from "../../../blocks/SwiperSection";
 import Quote from "../../../../assets/img/quot.png";
 import BgImage from "../../../../assets/img/banner2.jpg";
 
-const Section = styled.section``;
+const Section = styled.section`
+    .play-button {
+        position: relative;
+        z-index: 100;
+    }
+    .play-icon svg {
+        width: 50px;
+        position: absolute;
+        left: 0%;
+        transform: translateX(50%);
+    }
+`;
 
 type Props = { testimonial: string; name: string; desc: string };
 
@@ -58,7 +70,41 @@ const Testimonials = () => (
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <div className="vid-area" />
+                        <div className="vid-area">
+                            <div className="vid-icon">
+                                <a
+                                    className="play-button vid"
+                                    href="https://youtu.be/bOd0peiTiFY"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <svg className="circle-fill">
+                                        <circle
+                                            cx="43"
+                                            cy="43"
+                                            r="39"
+                                            stroke="#fff"
+                                            strokeWidth={0.5}
+                                        />
+                                    </svg>
+                                    <svg className="circle-track">
+                                        <circle
+                                            cx="43"
+                                            cy="43"
+                                            r="39"
+                                            stroke="none"
+                                            strokeWidth={1}
+                                            fill="none"
+                                        />
+                                    </svg>
+                                    <span className="polygon">
+                                        <div className="ti-control-play play-icon">
+                                            <TfiControlPlay height={48} width={45} />
+                                        </div>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-md-5 offset-md-1">
                         <div className="testimonials-box animate-box">
