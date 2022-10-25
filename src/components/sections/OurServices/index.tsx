@@ -21,7 +21,7 @@ const Card = ({ title, desc, img, idx }: Props) => (
 const options = [
     {
         idx: 1,
-        title: "Estate Management",
+        title: "Property sales",
         desc: "With several houses and estate under our care, we offer quality housing deals",
         img: Icon1,
     },

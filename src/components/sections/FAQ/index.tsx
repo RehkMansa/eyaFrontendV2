@@ -34,36 +34,31 @@ const Card = ({ open, idx, question, answer, toggleSection }: Props) => (
 const questionsLeft = [
     {
         idx: 1,
-        question: "Just some question",
-        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, velit.",
+        question: "How do I become an agent ?",
+        answer: "Becoming an agent is quite simple, all you have to do is agree to our terms and agreement and you are one",
     },
     {
         idx: 2,
-        question: "Just some question",
-        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, velit.",
+        question: "How does the agent program work ?",
+        answer: "Our top agent for the month receives a cash price of 500,000 naira, minus his commissions",
     },
 ];
 const questionsRight = [
     {
         idx: 1,
-        question: "Just some question 2",
-        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, velit.",
+        question: "How does the investment work ?",
+        answer: "You partner with us in the development of most Terraces and Bungalows  within the layout of our estates for 30% profit on your financial investment.",
     },
     {
         idx: 2,
-        question: "Just some question 2",
-        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, velit.",
+        question: "Can I make monthly payments for properties ?",
+        answer: "The answer is Yes! we have different payment plans for our properties",
     },
 ];
 
 const FAQ = () => {
     const [firstTab, setFirstTab] = useState<number>(1);
     const [secondTab, setSecondTab] = useState<number>(-1);
-    /* 
-        onclick
-        
-    
-    */
 
     const handleToggle = (idx: number, state: number): number => {
         if (state !== idx) {

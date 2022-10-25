@@ -41,7 +41,7 @@ const Card = ({ idx, title, content }: Props) => (
             <img className={idx % 2 !== 0 ? "tobotm" : undefined} src={Arrow} alt="" />
             <span className="icon ti-direction-alt">{icons[idx] || <TfiCheckBox />}</span>
             <div className="cont">
-                <h3>{idx}</h3>
+                <h3>0{idx}</h3>
                 <h6>{title}</h6>
                 <div className="line" />
                 <p>{content}</p>
