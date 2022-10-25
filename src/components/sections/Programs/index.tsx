@@ -45,9 +45,9 @@ const swiperOptions = [
     },
     {
         idx: 2,
-        meta: "Become a partner",
+        meta: "Partnership deal",
         img: Partnership,
-        name: "Partnership deal",
+        name: "Become a partner",
     },
 ];
 

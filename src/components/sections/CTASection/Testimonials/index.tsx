@@ -25,21 +25,21 @@ const Card = ({ testimonial, name, desc }: Props) => (
 
 const options = [
     {
-        idx: 0,
+        idx: 1,
         testimonial:
             "I love the energy given by the team when showing properties. The prices for their houses are very affordable",
         name: "Tochukwu Rapheal",
         desc: "Estate Services",
     },
     {
-        idx: 0,
+        idx: 2,
         testimonial:
             "I patronized their services in getting a home for myself, it was really worth, the design and structure were nice",
         name: "Onu Chidera",
         desc: "Housing",
     },
     {
-        idx: 0,
+        idx: 3,
         testimonial:
             "I'm currently a long time partner and investor. I'm very happy with their investment returns on properties.",
         name: "Ile Idoko",
