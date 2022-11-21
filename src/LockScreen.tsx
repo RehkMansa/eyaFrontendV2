@@ -10,6 +10,10 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100vh;
 
+    p {
+        margin-bottom: 4px;
+    }
+
     button {
         padding: 10px 30px;
         color: #fff;
@@ -115,15 +119,25 @@ const Wrapper = styled.div`
         opacity: 0.4;
     }
     .ghost__eye {
-        height: 30px;
-        width: 30px;
+        height: 20px;
+        width: 20px;
         background: black;
         position: absolute;
         border-radius: 50%;
     }
     .ghost__eye::before {
-        height: 10px;
-        width: 10px;
+        height: 7px;
+        width: 7px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        top: 8px;
+        left: 8px;
+        content: "";
+        position: absolute;
+    }
+    .ghost__eye::after {
+        height: 4px;
+        width: 4px;
         background: rgba(255, 255, 255, 0.8);
         border-radius: 50%;
         top: 10px;
@@ -131,23 +145,13 @@ const Wrapper = styled.div`
         content: "";
         position: absolute;
     }
-    .ghost__eye::after {
-        height: 5px;
-        width: 5px;
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 50%;
-        top: 25px;
-        left: 25px;
-        content: "";
-        position: absolute;
-    }
     .ghost__eye--1 {
-        left: 50px;
-        top: 25px;
+        left: 55px;
+        top: 20px;
     }
     .ghost__eye--2 {
-        left: 8px;
-        top: 30px;
+        left: 15px;
+        top: 20px;
     }
     .ghost__triangle {
         transform: scale(0.5, 1);
@@ -218,8 +222,10 @@ const LockScreen = () => {
             </div>
             {/* <div className="ghost__shadow" /> */}
             <form onSubmit={handleSubmit}>
+                <p className="text-center">The site is protected</p>
                 <input
                     type="password"
+                    placeholder="Enter password to continue"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                 />
